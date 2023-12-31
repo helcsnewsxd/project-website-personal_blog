@@ -1,8 +1,9 @@
 import "@/styles/globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Link from "next/link";
 import type { AppProps } from "next/app";
 import Navbar from "@/components/navbar";
-import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <div className="drawer-content">
           <Navbar />
           <Component {...pageProps} />
+          <Footer />
         </div>
         <div className="drawer-side z-[2500]">
           <label
