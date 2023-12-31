@@ -42,7 +42,7 @@ const MenuContentMobile = () => (
 const CenterContentDesktop = () => (
   <ul className="menu menu-horizontal bg-base-200 rounded-box">
     <li>
-      <Link href="/">Home</Link>
+      <Link href="/">Principal</Link>
     </li>
     <li>
       <details>

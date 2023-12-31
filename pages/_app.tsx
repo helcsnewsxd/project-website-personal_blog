@@ -23,23 +23,23 @@ export default function App({ Component, pageProps }: AppProps) {
           ></label>
           <ul className="menu p-4 w-8/12 min-h-full bg-base-200 text-base-content">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">Principal</Link>
             </li>
             <li>
               <Link href="/blog">Blog</Link>
               <ul className="p-2">
                 <li>
                   <Link href="/blog/competitive-programming">
-                    Competitive Programming
+                    Programación competitiva
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/cybersecurity">Cybersecurity</Link>
+                  <Link href="/blog/cybersecurity">Ciberseguridad</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href="/about">About me</Link>
+              <Link href="/about">Sobre mí</Link>
             </li>
           </ul>
         </div>
