@@ -45,22 +45,7 @@ const CenterContentDesktop = () => (
       <Link href="/">Principal</Link>
     </li>
     <li>
-      <details>
-        <summary>Blog</summary>
-        <ul className="p-2">
-          <li>
-            <Link href="/blog">General</Link>
-          </li>
-          <li>
-            <Link href="/blog/competitive-programming">
-              Programación competitiva
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog/cybersecurity">Ciberseguridad</Link>
-          </li>
-        </ul>
-      </details>
+      <Link href="/blog">Blog</Link>
     </li>
     <li>
       <Link href="/about">Sobre mí</Link>

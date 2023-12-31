@@ -27,19 +27,12 @@ export default function App({ Component, pageProps }: AppProps) {
             </li>
             <li>
               <Link href="/blog">Blog</Link>
-              <ul className="p-2">
-                <li>
-                  <Link href="/blog/competitive-programming">
-                    Programación competitiva
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/cybersecurity">Ciberseguridad</Link>
-                </li>
-              </ul>
             </li>
             <li>
               <Link href="/about">Sobre mí</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contacto</Link>
             </li>
           </ul>
         </div>
