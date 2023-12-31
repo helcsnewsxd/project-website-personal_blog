@@ -8,6 +8,7 @@ type Props = {
 };
 
 const postsPerPage = 6;
+const postTypes = ["Todos", "Programación Competitiva", "Ciberseguridad"];
 
 export default function Blog({ allPosts }: Props) {
   const [searchValue, setSearchValue] = useState("");
@@ -89,38 +90,21 @@ export default function Blog({ allPosts }: Props) {
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
               >
-                <li>
-                  <button
-                    onClick={handleSearchByType}
-                    className={postType === "" ? "bg-accent text-base-100" : ""}
-                  >
-                    Todos
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={handleSearchByType}
-                    className={
-                      postType === "Programación Competitiva"
-                        ? "bg-accent text-base-100"
-                        : ""
-                    }
-                  >
-                    Programación Competitiva
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={handleSearchByType}
-                    className={
-                      postType === "Ciberseguridad"
-                        ? "bg-accent text-base-100"
-                        : ""
-                    }
-                  >
-                    Ciberseguridad
-                  </button>
-                </li>
+                {postTypes.map((type) => (
+                  <li key={type}>
+                    <button
+                      onClick={handleSearchByType}
+                      className={
+                        postType === type ||
+                        (postType === "" && type === "Todos")
+                          ? "bg-accent text-base-100"
+                          : ""
+                      }
+                    >
+                      {type}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
