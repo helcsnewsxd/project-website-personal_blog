@@ -7,7 +7,7 @@ export default function WelcomeBanner() {
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-center text-neutral-content mt-10 mb-10">
+      <div className="hero-content text-center text-neutral-content mt-10 mb-10 animatecss animatecss-fadeInUp">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold text-balance">¡Bienvenido!</h1>
           <p className="mb-5 text-pretty">
