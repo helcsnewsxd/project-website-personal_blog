@@ -1,6 +1,6 @@
 ---
-title: "Good Bye 2023"
-description: "Solving problems of the Good Bye 2023 Codeforces contest"
+title: "Hello 2024"
+description: "Solving problems of the Hello 2024 Codeforces contest"
 coverImage: "https://codeforces.org/s/15654/images/codeforces-sponsored-by-ton-ny.png"
 date: "2023-12-30"
 author:
