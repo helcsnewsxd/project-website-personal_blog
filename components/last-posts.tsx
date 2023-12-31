@@ -8,8 +8,8 @@ type Props = {
 
 export default function LastPosts({ posts }: Props) {
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content text-center">
+    <div className="hero bg-base-200">
+      <div className="hero-content text-center mt-20 mb-20">
         <div className="max-w-screen">
           <h1 className="text-5xl text-balance font-bold py-6">Last Posts</h1>
 
