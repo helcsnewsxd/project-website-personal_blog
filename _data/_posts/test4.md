@@ -6,7 +6,7 @@ date: "2023-12-31"
 author:
   name: "Emanuel Nicolás Herrador"
   picture: ""
-tags: ["Codeforces", "Strings", "Palindromic Tree"]
+tags: ["Codeforces", "Strings", "Palindromic Tree", "Tag 1"]
 ---
 
 We can solve this problem using the _Palindromic Tree Structure_. For more information, you can read [this](https://www.geeksforgeeks.org/palindromic-tree-introduction-implementation/).
