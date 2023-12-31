@@ -63,7 +63,7 @@ export default function Blog({ allPosts }: Props) {
 
   // Component
   return (
-    <div className="hero min-h-screen min-w-screen bg-base-200">
+    <div className="hero bg-base-200">
       <div className="hero-content text-center mt-20 mb-20">
         <div className="max-w-screen">
           <h1 className="text-5xl text-balance font-bold py-6 mt-10">
@@ -74,7 +74,7 @@ export default function Blog({ allPosts }: Props) {
             <input
               type="text"
               placeholder="Buscar"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered"
               onChange={handleSearchChange}
             />
             <div className="dropdown">
@@ -87,7 +87,7 @@ export default function Blog({ allPosts }: Props) {
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
               >
                 <li>
                   <button
