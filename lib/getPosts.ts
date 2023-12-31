@@ -11,6 +11,7 @@ const fields = [
   "coverImage",
   "date",
   "author",
+  "type",
   "tags",
   "content",
 ];
