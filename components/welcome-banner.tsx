@@ -16,7 +16,7 @@ export default function WelcomeBanner() {
             much more!
           </p>
           <p className="mb-5 text-pretty text-lg italic">
-            What are you waiting for, let's go!
+            What are you waiting for, let&apos;s go!
           </p>
         </div>
       </div>
