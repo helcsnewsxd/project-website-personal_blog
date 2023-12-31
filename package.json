@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.2",
+    "animate.css": "^4.1.1",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.0.0",
     "markdown-it-math": "^4.1.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "tailwind-animatecss": "^1.0.0",
     "texzilla": "^1.0.2"
   },
   "devDependencies": {

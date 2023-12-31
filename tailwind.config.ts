@@ -7,7 +7,7 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   // add daisyUI plugin
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwind-animatecss")],
 
   // daisyUI config
   daisyui: {
