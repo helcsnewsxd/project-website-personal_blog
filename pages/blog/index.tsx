@@ -78,7 +78,7 @@ export default function Blog({ allPosts }: Props) {
                 role="button"
                 className="btn m-1 bg-base-100 shadow-sm"
               >
-                Buscar por tipo
+                Elegir tema
               </div>
               <ul
                 tabIndex={0}
