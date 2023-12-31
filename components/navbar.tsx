@@ -69,7 +69,7 @@ const CenterContentDesktop = () => (
 );
 
 const ContactButton = () => (
-  <button className="btn btn-primary rounded-3xl">
+  <button className="btn btn-primary rounded-3xl hover:scale-105">
     <Link href="/contact">Contact</Link>
   </button>
 );
