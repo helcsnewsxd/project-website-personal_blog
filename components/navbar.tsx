@@ -53,24 +53,24 @@ const CenterContentDesktop = () => (
           </li>
           <li>
             <Link href="/blog/competitive-programming">
-              Competitive Programming
+              Programación competitiva
             </Link>
           </li>
           <li>
-            <Link href="/blog/cybersecurity">Cybersecurity</Link>
+            <Link href="/blog/cybersecurity">Ciberseguridad</Link>
           </li>
         </ul>
       </details>
     </li>
     <li>
-      <Link href="/about">About me</Link>
+      <Link href="/about">Sobre mí</Link>
     </li>
   </ul>
 );
 
 const ContactButton = () => (
   <button className="btn btn-primary rounded-3xl hover:scale-105">
-    <Link href="/contact">Contact</Link>
+    <Link href="/contact">Contacto</Link>
   </button>
 );
 

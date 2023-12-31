@@ -1,13 +1,13 @@
 ---
 title: "Hello 2024"
-description: "Solving problems of the Hello 2024 Codeforces contest"
-coverImage: "https://codeforces.org/s/15654/images/codeforces-sponsored-by-ton-ny.png"
+description: "Resolviendo problemas del contest Hello 2024 de Codeforces"
+coverImage: ""
 date: "2023-12-30"
 author:
   name: "Emanuel Nicolás Herrador"
   picture: ""
-type: "Competitive Programming"
-tags: ["Codeforces", "C++"]
+type: "Programación Competitiva"
+tags: ["Codeforces", "C++", "Contest"]
 ---
 
 # Titulo

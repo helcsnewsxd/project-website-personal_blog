@@ -11,12 +11,13 @@ const limitDescription = 70;
 export default function PostCard({ post }: Props) {
   const limitedTags = post.tags.slice(0, limitTags);
 
-  const dateString = new Date(post.date).toLocaleString("en-us", {
+  let dateString = new Date(post.date).toLocaleString("es-ar", {
     weekday: "long",
     year: "numeric",
     month: "short",
     day: "numeric",
   });
+  dateString = dateString[0].toUpperCase() + dateString.slice(1);
 
   let limitedDescription = post.description.slice(0, limitDescription);
   if (post.description.length > limitDescription) {
@@ -52,7 +53,7 @@ export default function PostCard({ post }: Props) {
         </p>
         <div className="card-actions justify-end p-1">
           <Link href={`/blog/posts/${post.slug}`}>
-            <button className="btn btn-primary hover:scale-105">Read</button>
+            <button className="btn btn-primary hover:scale-105">Leer</button>
           </Link>
         </div>
       </div>

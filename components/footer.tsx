@@ -108,7 +108,8 @@ export default function Footer() {
       </nav>
       <aside>
         <p className="text-pretty">
-          Copyright © 2023 - All right reserved by Emanuel Nicolás Herrador
+          Copyright © 2023 - Todos los derechos reservados por Emanuel Nicolás
+          Herrador
         </p>
       </aside>
     </footer>

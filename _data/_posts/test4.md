@@ -1,12 +1,12 @@
 ---
 title: "Cyclic Substrings"
-description: "Problem C of The 2023 ICPC Asia Hefei Regional Contest (The 2nd Universal Cup. Stage 12: Hefei)"
+description: "Problema C del contest The 2023 ICPC Asia Hefei Regional Contest (The 2nd Universal Cup. Stage 12: Hefei)"
 coverImage: "https://codeforces.org/s/15654/images/codeforces-sponsored-by-ton-ny.png"
 date: "2023-12-31"
 author:
   name: "Emanuel Nicolás Herrador"
   picture: ""
-type: "Competitive Programming"
+type: "Programación Competitiva"
 tags: ["Codeforces", "Strings", "Palindromic Tree", "Tag 1"]
 ---
 

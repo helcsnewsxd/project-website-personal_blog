@@ -5,7 +5,9 @@ export default function Custom404() {
         <p className="text-3xl text-balance font-semibold">404</p>
         <div className="divider divider-horizontal divider-primary" />
         <div className="flex justify-center items-center">
-          <p className="text-base text-pretty">This page could not be found.</p>
+          <p className="text-base text-pretty">
+            Esta página no se pudo encontrar.
+          </p>
         </div>
       </div>
     </div>
