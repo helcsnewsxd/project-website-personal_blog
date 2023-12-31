@@ -6,6 +6,7 @@ date: "2021-12-30"
 author:
   name: "Emanuel Nicolás Herrador 3"
   picture: ""
+type: "Competitive Programming"
 tags: ["Codeforces 3", "C++ 3"]
 ---
 

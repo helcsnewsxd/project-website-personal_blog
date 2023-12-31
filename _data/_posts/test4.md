@@ -6,6 +6,7 @@ date: "2023-12-31"
 author:
   name: "Emanuel Nicolás Herrador"
   picture: ""
+type: "Competitive Programming"
 tags: ["Codeforces", "Strings", "Palindromic Tree", "Tag 1"]
 ---
 

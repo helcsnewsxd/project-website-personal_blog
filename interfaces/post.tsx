@@ -7,6 +7,7 @@ type PostType = {
   coverImage: string;
   author: Author;
   description: string;
+  type: string;
   tags: string[];
   content: string;
 };
