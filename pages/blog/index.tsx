@@ -64,7 +64,7 @@ export default function Blog({ allPosts }: Props) {
 
   // Component
   return (
-    <div className="hero bg-base-200">
+    <div className="hero min-h-full bg-base-200">
       <div className="hero-content text-center mt-20 mb-20 animatecss animatecss-fadeInUp">
         <div className="max-w-screen">
           <h1 className="text-5xl text-balance font-bold py-6 mt-10">
@@ -110,13 +110,19 @@ export default function Blog({ allPosts }: Props) {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3 mt-10 mb-10">
-            {filteredPosts
-              .slice((page - 1) * postsPerPage, page * postsPerPage)
-              .map((post: PostType) => (
-                <PostCard key={post.slug} post={post} />
-              ))}
-          </div>
+          {filteredPosts.length === 0 ? (
+            <p className="text-md text-base-content mt-10 mb-10">
+              No se encontraron resultados
+            </p>
+          ) : (
+            <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3 mt-10 mb-10">
+              {filteredPosts
+                .slice((page - 1) * postsPerPage, page * postsPerPage)
+                .map((post: PostType) => (
+                  <PostCard key={post.slug} post={post} />
+                ))}
+            </div>
+          )}
 
           <div className="join">
             {page > 1 && (
