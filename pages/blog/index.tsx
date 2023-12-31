@@ -105,7 +105,7 @@ export default function Blog({ allPosts }: Props) {
             <input
               type="text"
               placeholder="Buscar"
-              className="input input-bordered"
+              className="input input-bordered w-auto p-2"
               onChange={handleSearchChange}
             />
           </div>
