@@ -65,7 +65,7 @@ export default function Blog({ allPosts }: Props) {
   // Component
   return (
     <div className="hero bg-base-200">
-      <div className="hero-content text-center mt-20 mb-20">
+      <div className="hero-content text-center mt-20 mb-20 animatecss animatecss-fadeInUp">
         <div className="max-w-screen">
           <h1 className="text-5xl text-balance font-bold py-6 mt-10">
             Todos mis blogs
