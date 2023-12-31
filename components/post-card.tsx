@@ -33,6 +33,11 @@ export default function PostCard({ post }: Props) {
           {dateString}
         </p>
         <div className="flex flex-row justify-start">
+          <span className="badge badge-outline badge-secondary text-pretty text-xs m-1 italic">
+            {post.type}
+          </span>
+        </div>
+        <div className="flex flex-row justify-start">
           {limitedTags.map((tag: string) => (
             <span
               key={tag}
