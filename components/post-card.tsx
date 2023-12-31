@@ -34,7 +34,7 @@ export default function PostCard({ post }: Props) {
           {dateString}
         </p>
         <div className="flex flex-row justify-start">
-          <span className="badge badge-accent rounded-md text-pretty text-xs m-1 text-current	text-base-100">
+          <span className="badge badge-accent rounded-md text-pretty text-xs m-1 text-base-100">
             {post.type}
           </span>
         </div>
