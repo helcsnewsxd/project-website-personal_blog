@@ -10,7 +10,7 @@ const BellaLogo = () => (
       priority={true}
       width={50}
       height={50}
-      className="hover:scale-110"
+      className="hover:scale-105"
     />
   </Link>
 );
