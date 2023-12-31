@@ -72,12 +72,6 @@ export default function Blog({ allPosts }: Props) {
           </h1>
 
           <div className="flex flex-row justify-center items-center">
-            <input
-              type="text"
-              placeholder="Buscar"
-              className="input input-bordered"
-              onChange={handleSearchChange}
-            />
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -107,9 +101,16 @@ export default function Blog({ allPosts }: Props) {
                 ))}
               </ul>
             </div>
+
+            <input
+              type="text"
+              placeholder="Buscar"
+              className="input input-bordered"
+              onChange={handleSearchChange}
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-10">
+          <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3 mt-10 mb-10">
             {filteredPosts
               .slice((page - 1) * postsPerPage, page * postsPerPage)
               .map((post: PostType) => (
