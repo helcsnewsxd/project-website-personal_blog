@@ -5,6 +5,7 @@ import PostCard from "@/components/posts/individual/post-card";
 import { useState, useEffect } from "react";
 
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 
 type Props = {
   allPosts: PostType[];
@@ -42,19 +43,23 @@ const postsPerPage = 6;
 
 export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
   // URL Parameters
+  const router = useRouter();
+
   const searchParams = useSearchParams();
   const searchValueParam = searchParams.get("searchValue");
   const pageParam = searchParams.get("page");
+  const postTypeParam = searchParams.get("postType");
 
   // State variables
   const [searchValue, setSearchValue] = useState(searchValueParam || "");
   const [page, setPage] = useState(pageParam ? parseInt(pageParam) : 1);
-  const [postType, setPostType] = useState("");
+  const [postType, setPostType] = useState(postTypeParam || "");
 
   useEffect(() => {
     setSearchValue(searchValueParam || "");
     setPage(pageParam ? parseInt(pageParam) : 1);
-  }, [searchValueParam, pageParam]);
+    setPostType(postTypeParam || "");
+  }, [searchValueParam, pageParam, postTypeParam]);
 
   // Filter posts by search value and get pages count
   const filteredPosts = filterPosts(allPosts, searchValue);
@@ -63,8 +68,16 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
   // Handle search input change
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
-
     setPage(1);
+
+    // Update URL changing only searchValue parameter and keeping the rest
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (e.target.value) searchParams.set("searchValue", e.target.value);
+    else searchParams.delete("searchValue");
+
+    searchParams.delete("page");
+    router.push({ search: searchParams.toString() });
   };
 
   // Handle search by type
@@ -74,21 +87,54 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
         e.currentTarget.textContent) ||
         ""
     );
-
     setPage(1);
+
+    // Update URL changing only postType parameter and keeping the rest
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (e.currentTarget.textContent !== "Todos" && e.currentTarget.textContent)
+      searchParams.set("postType", e.currentTarget.textContent);
+    else searchParams.delete("postType");
+
+    searchParams.delete("page");
+
+    router.push({ search: searchParams.toString() });
   };
 
   // Handle pagination buttons
   const handleNextPage = () => {
     setPage(Math.min(page + 1, cntPages));
+
+    // Update URL changing only page parameter and keeping the rest
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchParams.set("page", (page + 1).toString());
+
+    router.push({ search: searchParams.toString() });
   };
 
   const handleSetSpecificPage = (pageNumber: number) => {
     setPage(pageNumber);
+
+    // Update URL changing only page parameter and keeping the rest
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (pageNumber === 1) searchParams.delete("page");
+    else searchParams.set("page", pageNumber.toString());
+
+    router.push({ search: searchParams.toString() });
   };
 
   const handlePreviousPage = () => {
     setPage(Math.max(page - 1, 1));
+
+    // Update URL changing only page parameter and keeping the rest
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (page - 1 === 1) searchParams.delete("page");
+    else searchParams.set("page", (page - 1).toString());
+
+    router.push({ search: searchParams.toString() });
   };
 
   return (
