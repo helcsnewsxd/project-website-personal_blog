@@ -15,11 +15,19 @@ export default function LastPosts({ posts }: Props) {
             Últimos posteos
           </h1>
 
-          <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3">
-            {posts.map((post: PostType) => (
-              <PostCard key={post.slug} post={post} type={true} />
-            ))}
-          </div>
+          {posts.length > 0 ? (
+            <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3">
+              {posts.map((post: PostType) => (
+                <PostCard key={post.slug} post={post} type={true} />
+              ))}
+            </div>
+          ) : (
+            <div className="py-6">
+              <p className="text-2xl text-base-content text-opacity-60 italic">
+                No hay posteos para mostrar.
+              </p>
+            </div>
+          )}
 
           <Link href="/blog">
             <button className="btn btn-primary hover:scale-105">Ver más</button>

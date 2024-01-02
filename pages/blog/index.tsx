@@ -111,7 +111,7 @@ export default function Blog({ allPosts }: Props) {
           </div>
 
           {filteredPosts.length === 0 ? (
-            <p className="text-md text-base-content mt-10 mb-10">
+            <p className="text-center text-xl lg:text-2xl text-base-content text-opacity-60 mt-10 mb-10 italic">
               No se encontraron resultados
             </p>
           ) : (
