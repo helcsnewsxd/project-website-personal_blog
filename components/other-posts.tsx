@@ -9,16 +9,10 @@ export default function OtherPosts({ posts }: { posts: PostType[] }) {
         Otros posts
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
         {posts.map((p) => (
-          <PostCard key={p.slug} post={p} />
+          <PostCard key={p.slug} post={p} type={false} />
         ))}
-      </div>
-
-      <div className="flex justify-center mt-10">
-        <Link href="/blog">
-          <button className="btn btn-primary hover:scale-105">Ver más</button>
-        </Link>
       </div>
     </div>
   );
