@@ -23,7 +23,7 @@ export default function Post({ post }: Props) {
 
   return (
     <div className="py-32 px-10">
-      <div className="bg-base-100 shadow-2xl rounded-3xl p-10">
+      <div className="bg-base-100 shadow-2xl rounded-3xl p-10 animatecss animatecss-fadeIn">
         <p className="mb-10 text-balance text-5xl font-semibold text-center">
           {post.title}
         </p>
