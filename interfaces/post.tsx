@@ -4,7 +4,7 @@ type PostType = {
   slug: string;
   title: string;
   date: string;
-  coverImage: string;
+  picture: string;
   author: Author;
   description: string;
   type: string;

@@ -9,6 +9,7 @@ const fields = [
   "title",
   "description",
   "date",
+  "picture",
   "author",
   "type",
   "tags",

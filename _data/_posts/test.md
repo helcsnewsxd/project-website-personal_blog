@@ -2,6 +2,7 @@
 title: "Hello 2024"
 description: "Resolviendo problemas del contest Hello 2024 de Codeforces"
 date: "2024-01-02"
+picture: "codeforces"
 author:
   name: "Emanuel Nicolás Herrador"
   picture: "/assets/authors/ema.png"
