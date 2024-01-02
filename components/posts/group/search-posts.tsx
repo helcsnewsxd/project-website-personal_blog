@@ -8,6 +8,8 @@ import { useSearchParams } from "next/navigation";
 
 type Props = {
   allPosts: PostType[];
+  allTags: string[];
+  allTypes: string[];
 };
 
 function filterPosts(posts: PostType[], searchValue: string) {
@@ -37,9 +39,8 @@ function filterPosts(posts: PostType[], searchValue: string) {
 
 // Constants
 const postsPerPage = 6;
-const postTypes = ["Todos", "Programación Competitiva", "Ciberseguridad"];
 
-export default function SearchPosts({ allPosts }: Props) {
+export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
   // URL Parameters
   const searchParams = useSearchParams();
   const searchValueParam = searchParams.get("searchValue");
@@ -105,7 +106,7 @@ export default function SearchPosts({ allPosts }: Props) {
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
           >
-            {postTypes.map((type) => (
+            {allTypes.map((type) => (
               <li key={type}>
                 <button
                   onClick={handleSearchByType}

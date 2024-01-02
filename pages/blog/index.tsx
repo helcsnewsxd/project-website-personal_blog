@@ -7,6 +7,28 @@ type Props = {
   allPosts: PostType[];
 };
 
+function getAllTags(allPosts: PostType[]) {
+  let tags: string[] = [];
+
+  for (let post of allPosts) {
+    for (let tag of post.tags) {
+      if (!tags.includes(tag)) tags.push(tag);
+    }
+  }
+
+  return tags;
+}
+
+function getAllTypes(allPosts: PostType[]) {
+  let types: string[] = ["Todos"];
+
+  for (let post of allPosts) {
+    if (!types.includes(post.type)) types.push(post.type);
+  }
+
+  return types;
+}
+
 export default function Blog({ allPosts }: Props) {
   return (
     <div className="hero min-h-full bg-base-200">
@@ -17,7 +39,11 @@ export default function Blog({ allPosts }: Props) {
           </h1>
 
           <Suspense>
-            <SearchPosts allPosts={allPosts} />
+            <SearchPosts
+              allPosts={allPosts}
+              allTags={getAllTags(allPosts)}
+              allTypes={getAllTypes(allPosts)}
+            />
           </Suspense>
         </div>
       </div>
