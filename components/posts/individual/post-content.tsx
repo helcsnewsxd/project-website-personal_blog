@@ -7,6 +7,8 @@ type Props = {
 };
 
 export default function PostContent({ post }: Props) {
+  const authorPicturePath = `/assets/authors/${post.author.picture}.png`;
+
   let dateString = new Date(post.date).toLocaleString("es-ar", {
     weekday: "long",
     year: "numeric",
@@ -27,7 +29,7 @@ export default function PostContent({ post }: Props) {
 
       <div className="flex justify-start items-center">
         <Image
-          src={post.author.picture}
+          src={authorPicturePath}
           alt={post.author.name}
           className="w-10 h-10 mr-4"
           width={50}

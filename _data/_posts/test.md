@@ -5,7 +5,7 @@ date: "2024-01-02"
 picture: "codeforces"
 author:
   name: "Emanuel Nicolás Herrador"
-  picture: "/assets/authors/ema.png"
+  picture: "ema"
 type: "Programación Competitiva"
 tags: ["Codeforces", "C++", "Contest"]
 ---
