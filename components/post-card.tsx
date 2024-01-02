@@ -3,12 +3,13 @@ import type PostType from "../interfaces/post";
 
 type Props = {
   post: PostType;
+  type: Boolean;
 };
 
 const limitTags = 3;
 const limitDescription = 70;
 
-export default function PostCard({ post }: Props) {
+export default function PostCard({ post, type }: Props) {
   const limitedTags = post.tags.slice(0, limitTags);
 
   let dateString = new Date(post.date).toLocaleString("es-ar", {
@@ -25,7 +26,7 @@ export default function PostCard({ post }: Props) {
   }
 
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className={`card bg-base-100 ${type ? "shadow-xl" : "border"}`}>
       <div className="card-body">
         <h2 className="card-title text-balance text-xl">{post.title}</h2>
         <p className="text-pretty font-light text-start text-xs p-1">

@@ -17,7 +17,7 @@ export default function LastPosts({ posts }: Props) {
 
           <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3">
             {posts.map((post: PostType) => (
-              <PostCard key={post.slug} post={post} />
+              <PostCard key={post.slug} post={post} type={true} />
             ))}
           </div>
 
