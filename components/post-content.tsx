@@ -17,9 +17,14 @@ export function PostContent({ post }: Props) {
 
   return (
     <div>
-      <p className="mb-10 text-balance font-semibold text-center text-3xl lg:text-5xl">
+      <p className="mb-10 text-pretty font-semibold text-3xl lg:text-5xl">
         {post.title}
       </p>
+
+      <div className="font-light text-lg lg:text-xl my-10">
+        <p>{post.description}</p>
+      </div>
+
       <div className="flex justify-start items-center">
         <Image
           src={post.author.picture}
@@ -28,6 +33,7 @@ export function PostContent({ post }: Props) {
           width={50}
           height={50}
         />
+
         <div className="font-light italic text-base lg:text-lg">
           <p>Redactado por {post.author.name}</p>
           <p>{dateString}</p>

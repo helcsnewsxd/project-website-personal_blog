@@ -22,7 +22,7 @@ export default function Post({ post, allPosts }: Props) {
   return (
     <div className="py-32 px-4 lg:px-10">
       <div className="bg-base-100 lg:shadow-2xl lg:rounded-3xl lg:p-10 animatecss animatecss-fadeIn">
-        <div className="w-full h-auto p-4 mb-4 lg:p-10 lg:mb-10">
+        <div className="w-1/2 h-auto mb-4 lg:mb-10">
           <Image
             src={picturePath}
             alt={post.title}
@@ -31,7 +31,9 @@ export default function Post({ post, allPosts }: Props) {
           />
         </div>
 
-        <PostContent post={post} />
+        <div className="py-10">
+          <PostContent post={post} />
+        </div>
 
         <div className="divider py-10 px-2 lg:py-20 lg:px-10" />
 

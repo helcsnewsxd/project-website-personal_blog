@@ -1,5 +1,5 @@
 ---
-title: "Hello 2024"
+title: "Punto de partida: Descubriendo la Programación Competitiva."
 description: "Resolviendo problemas del contest Hello 2024 de Codeforces"
 date: "2024-01-02"
 picture: "codeforces"
