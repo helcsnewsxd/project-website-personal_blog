@@ -29,9 +29,6 @@ function filterPosts(posts: PostType[], searchValue: string) {
         occurrences += searchContent.toLowerCase().split(value).length - 1;
       }
 
-      if (post.slug == "test")
-        console.log(occurrences, " ", searchValueList, " ", searchContent);
-
       return { post, occurrences };
     })
     .filter((post) => post.occurrences > 0)
@@ -44,6 +41,7 @@ export default function Blog({ allPosts }: Props) {
   const [page, setPage] = useState(1);
   const [postType, setPostType] = useState("");
 
+  // Filter posts by search value and get pages count
   const filteredPosts = filterPosts(allPosts, searchValue);
   const cntPages = Math.ceil(filteredPosts.length / postsPerPage);
 
