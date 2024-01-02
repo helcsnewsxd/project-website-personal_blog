@@ -35,6 +35,22 @@ export default function Post({ post, allPosts }: Props) {
           <PostContent post={post} />
         </div>
 
+        <div>
+          <h2 className="text-2xl lg:text-4xl font-semibold mb-4 lg:mb-10">
+            Temas relacionados
+          </h2>
+          <div className="flex flex-wrap">
+            {post.tags.map((tag) => (
+              <div
+                key={tag}
+                className="badge badge-outline badge-accent text-pretty text-sm lg:text-base m-1 w-auto h-auto"
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="divider py-10 px-2 lg:py-20 lg:px-10" />
 
         <div>
