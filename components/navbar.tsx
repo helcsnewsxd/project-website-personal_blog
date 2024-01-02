@@ -54,9 +54,11 @@ const CenterContentDesktop = () => (
 );
 
 const ContactButton = () => (
-  <button className="btn btn-primary rounded-3xl hover:scale-105">
-    <Link href="/contact">Contacto</Link>
-  </button>
+  <Link href="/contact">
+    <button className="btn btn-primary rounded-3xl hover:scale-105">
+      Contacto
+    </button>
+  </Link>
 );
 
 export default function Navbar() {
