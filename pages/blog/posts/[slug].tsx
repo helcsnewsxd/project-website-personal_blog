@@ -17,11 +17,11 @@ const limitToShow = 3;
 
 export default function Post({ post, allPosts }: Props) {
   return (
-    <div className="py-32 px-10">
-      <div className="bg-base-100 lg:shadow-2xl lg:rounded-3xl lg:p-10 animatecss animatecss-fadeIn min-w-fit">
+    <div className="py-32 px-4 lg:px-10">
+      <div className="bg-base-100 lg:shadow-2xl lg:rounded-3xl lg:p-10 animatecss animatecss-fadeIn">
         <PostContent post={post} />
 
-        <div className="divider p-10 lg:p-20" />
+        <div className="divider py-10 px-2 lg:py-20 lg:px-10" />
 
         <div>
           <OtherPosts
