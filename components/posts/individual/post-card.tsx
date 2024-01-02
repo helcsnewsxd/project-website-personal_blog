@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type PostType from "@/interfaces/post";
+import PostTypeBadge from "./badges/post-type";
+import PostTagBadge from "./badges/post-tag";
 
 type Props = {
   post: PostType;
@@ -51,18 +53,11 @@ export default function PostCard({ post, type }: Props) {
           {dateString}
         </p>
         <div className="flex flex-row justify-start">
-          <span className="badge badge-accent rounded-md text-pretty text-xs m-1 text-base-100">
-            {post.type}
-          </span>
+          <PostTypeBadge type={post.type} />
         </div>
         <div className="text-start justify-start w-auto">
           {limitedTags.map((tag: string) => (
-            <span
-              key={tag}
-              className="badge badge-outline badge-accent text-pretty text-xs m-1 w-auto h-auto"
-            >
-              {tag}
-            </span>
+            <PostTagBadge key={tag} tag={tag} />
           ))}
         </div>
         <p className="text-pretty text-base p-1 text-start">
