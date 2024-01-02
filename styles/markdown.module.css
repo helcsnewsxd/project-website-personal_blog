@@ -2,6 +2,8 @@
   @apply text-lg leading-relaxed;
 }
 
+/* Titles */
+
 .markdown h1 {
   @apply text-4xl mt-14 mb-4 leading-snug text-balance font-semibold;
 }
@@ -18,6 +20,94 @@
   @apply text-xl mt-8 mb-4 leading-snug text-balance font-semibold;
 }
 
+/* Text */
+
 .markdown p {
   @apply text-lg leading-relaxed text-pretty;
+}
+
+.markdown a {
+  @apply text-secondary hover:underline;
+}
+
+/* Lists */
+
+.markdown ul {
+  @apply list-disc list-inside;
+}
+
+.markdown ol {
+  @apply list-decimal list-inside;
+}
+
+.mardown li {
+  @apply mb-2;
+}
+
+.markdown ul ul,
+.markdown ol ul {
+  @apply list-disc list-inside ml-4;
+}
+
+.markdown ul ol,
+.markdown ol ol {
+  @apply list-decimal list-inside ml-4;
+}
+
+/* Code */
+
+.markdown pre {
+  @apply text-sm leading-snug text-pretty p-4 rounded-md bg-base-300;
+}
+
+.markdown code {
+  @apply text-sm leading-snug text-pretty;
+}
+
+.markdown code::before {
+  @apply text-sm leading-snug text-pretty;
+}
+
+.markdown pre code {
+  @apply text-sm leading-snug text-pretty;
+}
+
+/* Blockquote */
+
+.markdown blockquote {
+  @apply text-lg leading-relaxed text-pretty border-l-4 border-primary pl-4;
+}
+
+/* Images */
+
+.markdown img {
+  @apply mx-auto my-8;
+}
+
+/* Tables */
+
+.markdown table {
+  @apply w-auto text-left border-collapse border border-solid border-base-300 mx-auto mb-5 mt-5;
+}
+
+.markdown table thead tr {
+  @apply bg-base-300;
+}
+
+.markdown table thead tr th {
+  @apply px-4 py-2 border border-solid border-base-300;
+}
+
+.markdown table tbody tr {
+  @apply border border-solid border-base-300;
+}
+
+.markdown table tbody tr td {
+  @apply px-4 py-2 border border-solid border-base-300;
+}
+
+/* Inline code */
+
+.markdown p code {
+  @apply text-sm leading-snug text-pretty;
 }
