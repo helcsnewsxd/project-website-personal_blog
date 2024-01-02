@@ -75,7 +75,7 @@
 /* Blockquote */
 
 .markdown blockquote {
-  @apply text-lg leading-relaxed text-pretty border-l-4 border-primary pl-4;
+  @apply text-lg leading-relaxed text-pretty border-l-4 border-secondary pl-4;
 }
 
 /* Images */
@@ -87,23 +87,23 @@
 /* Tables */
 
 .markdown table {
-  @apply w-auto text-left border-collapse border border-solid border-base-300 mx-auto mb-5 mt-5;
+  @apply w-auto text-left border-collapse border border-solid border-secondary mx-auto mb-5 mt-5;
 }
 
 .markdown table thead tr {
-  @apply bg-base-300;
+  @apply bg-secondary;
 }
 
 .markdown table thead tr th {
-  @apply px-4 py-2 border border-solid border-base-300;
+  @apply px-4 py-2 border border-solid border-secondary;
 }
 
 .markdown table tbody tr {
-  @apply border border-solid border-base-300;
+  @apply border border-solid border-secondary;
 }
 
 .markdown table tbody tr td {
-  @apply px-4 py-2 border border-solid border-base-300;
+  @apply px-4 py-2 border border-solid border-secondary;
 }
 
 /* Inline code */
