@@ -16,7 +16,7 @@ export function PostContent({ post }: Props) {
   dateString = dateString[0].toUpperCase() + dateString.slice(1);
 
   return (
-    <div className="bg-base-100 shadow-2xl rounded-3xl p-10 animatecss animatecss-fadeIn min-w-fit w-full">
+    <div className="bg-base-100 lg:shadow-2xl lg:rounded-3xl lg:p-10 animatecss animatecss-fadeIn min-w-fit">
       <p className="mb-10 text-balance font-semibold text-center text-3xl lg:text-5xl">
         {post.title}
       </p>
