@@ -7,28 +7,44 @@ type Props = {
   allPosts: PostType[];
 };
 
+// Constants
 const postsPerPage = 6;
 const postTypes = ["Todos", "Programación Competitiva", "Ciberseguridad"];
+
+function filterPosts(posts: PostType[], searchValue: string) {
+  // Filter posts by search value for title, description and tags and sort for more occurrences
+  return posts
+    .map((post: PostType) => {
+      let searchContent = post.title + " " + post.description;
+      for (let tag of post.tags) {
+        searchContent += " " + tag;
+      }
+
+      let occurrences = 0;
+      let searchValueList = searchValue.split(" ").filter((value) => value);
+
+      if (searchValueList.length === 0) return { post, occurrences: 1 }; // Withour search value, return all posts
+
+      for (let value of searchValueList) {
+        occurrences += searchContent.toLowerCase().split(value).length - 1;
+      }
+
+      if (post.slug == "test")
+        console.log(occurrences, " ", searchValueList, " ", searchContent);
+
+      return { post, occurrences };
+    })
+    .filter((post) => post.occurrences > 0)
+    .sort((a, b) => b.occurrences - a.occurrences)
+    .map((post) => post.post);
+}
 
 export default function Blog({ allPosts }: Props) {
   const [searchValue, setSearchValue] = useState("");
   const [page, setPage] = useState(1);
   const [postType, setPostType] = useState("");
 
-  // Filter posts by search value for title, description and tags
-  const filteredPosts = allPosts.filter((post: PostType) => {
-    if (postType !== "" && postType !== post.type) {
-      return null;
-    }
-
-    let searchContent = post.title + post.description;
-    for (let tag of post.tags) {
-      searchContent += tag;
-    }
-
-    return searchContent.toLowerCase().includes(searchValue.toLowerCase());
-  });
-
+  const filteredPosts = filterPosts(allPosts, searchValue);
   const cntPages = Math.ceil(filteredPosts.length / postsPerPage);
 
   // Handle search input change
