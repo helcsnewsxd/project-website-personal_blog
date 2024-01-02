@@ -43,15 +43,17 @@ export default function SearchPosts({ allPosts }: Props) {
   // URL Parameters
   const searchParams = useSearchParams();
   const searchValueParam = searchParams.get("searchValue");
+  const pageParam = searchParams.get("page");
 
   // State variables
   const [searchValue, setSearchValue] = useState(searchValueParam || "");
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(pageParam ? parseInt(pageParam) : 1);
   const [postType, setPostType] = useState("");
 
   useEffect(() => {
     setSearchValue(searchValueParam || "");
-  }, [searchValueParam]);
+    setPage(pageParam ? parseInt(pageParam) : 1);
+  }, [searchValueParam, pageParam]);
 
   // Filter posts by search value and get pages count
   const filteredPosts = filterPosts(allPosts, searchValue);
