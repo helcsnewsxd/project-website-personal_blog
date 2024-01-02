@@ -52,11 +52,17 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
 
   // State variables
   const [searchValue, setSearchValue] = useState(searchValueParam || "");
+  const [searchValueAuxiliar, setSearchValueAuxiliar] = useState(
+    searchValueParam || ""
+  );
+
   const [page, setPage] = useState(pageParam ? parseInt(pageParam) : 1);
   const [postType, setPostType] = useState(postTypeParam || "");
 
   useEffect(() => {
     setSearchValue(searchValueParam || "");
+    setSearchValueAuxiliar(searchValueParam || "");
+
     setPage(pageParam ? parseInt(pageParam) : 1);
     setPostType(postTypeParam || "");
   }, [searchValueParam, pageParam, postTypeParam]);
@@ -67,13 +73,18 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
 
   // Handle search input change
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(e.target.value);
+    setSearchValueAuxiliar(e.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    setSearchValue(searchValueAuxiliar);
     setPage(1);
 
     // Update URL changing only searchValue parameter and keeping the rest
     const searchParams = new URLSearchParams(window.location.search);
 
-    if (e.target.value) searchParams.set("searchValue", e.target.value);
+    if (searchValueAuxiliar)
+      searchParams.set("searchValue", searchValueAuxiliar);
     else searchParams.delete("searchValue");
 
     searchParams.delete("page");
@@ -144,10 +155,13 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
           type="text"
           placeholder="Buscar"
           className="input input-bordered w-auto p-2"
-          onChange={handleSearchChange}
           defaultValue={searchValue}
+          onChange={handleSearchChange}
         />
-        <button className="btn bg-base-100 shadow-lg ml-4 hover:scale-105">
+        <button
+          className="btn bg-base-100 shadow-lg ml-4 hover:scale-105"
+          onClick={handleSearchSubmit}
+        >
           <svg
             id="SEARCH"
             viewBox="0 0 22 21"
