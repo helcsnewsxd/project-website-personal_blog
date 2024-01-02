@@ -20,6 +20,14 @@ export default function PostCard({ post, type }: Props) {
   });
   dateString = dateString[0].toUpperCase() + dateString.slice(1);
 
+  const isNew = (date: Date) => {
+    const now = new Date();
+    const diff = now.getTime() - date.getTime();
+    const diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+
+    return diffDays <= 1;
+  };
+
   let limitedDescription = post.description.slice(0, limitDescription);
   if (post.description.length > limitDescription) {
     limitedDescription += "...";
@@ -27,6 +35,14 @@ export default function PostCard({ post, type }: Props) {
 
   return (
     <div className={`card bg-base-100 ${type ? "shadow-xl" : "border"}`}>
+      {isNew(new Date(post.date)) && (
+        <div className="flex justify-end">
+          <p className="bg-secondary text-sm rounded-lg py-1 px-2 mt-3 mr-3">
+            Nuevo
+          </p>
+        </div>
+      )}
+
       <div className="card-body">
         <h2 className="card-title text-balance text-xl">{post.title}</h2>
         <p className="text-pretty font-light text-start text-xs p-1">
