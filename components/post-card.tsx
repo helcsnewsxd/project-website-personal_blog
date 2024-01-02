@@ -55,7 +55,7 @@ export default function PostCard({ post, type }: Props) {
             {post.type}
           </span>
         </div>
-        <div className="flex flex-row justify-start">
+        <div className="text-start justify-start w-auto">
           {limitedTags.map((tag: string) => (
             <span
               key={tag}

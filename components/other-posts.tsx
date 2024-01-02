@@ -3,7 +3,7 @@ import PostCard from "@/components/post-card";
 
 export default function OtherPosts({ posts }: { posts: PostType[] }) {
   return (
-    <div>
+    <div className="w-auto">
       <p className="text-center text-3xl lg:text-5xl font-semibold mb-10">
         Otros posts
       </p>
