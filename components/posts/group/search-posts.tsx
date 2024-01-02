@@ -1,6 +1,10 @@
+"use client";
+
 import type PostType from "@/interfaces/post";
 import PostCard from "@/components/posts/individual/post-card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { useSearchParams } from "next/navigation";
 
 type Props = {
   allPosts: PostType[];
@@ -36,9 +40,18 @@ const postsPerPage = 6;
 const postTypes = ["Todos", "Programación Competitiva", "Ciberseguridad"];
 
 export default function SearchPosts({ allPosts }: Props) {
-  const [searchValue, setSearchValue] = useState("");
+  // URL Parameters
+  const searchParams = useSearchParams();
+  const searchValueParam = searchParams.get("searchValue");
+
+  // State variables
+  const [searchValue, setSearchValue] = useState(searchValueParam || "");
   const [page, setPage] = useState(1);
   const [postType, setPostType] = useState("");
+
+  useEffect(() => {
+    setSearchValue(searchValueParam || "");
+  }, [searchValueParam]);
 
   // Filter posts by search value and get pages count
   const filteredPosts = filterPosts(allPosts, searchValue);
@@ -112,6 +125,7 @@ export default function SearchPosts({ allPosts }: Props) {
           placeholder="Buscar"
           className="input input-bordered w-auto p-2"
           onChange={handleSearchChange}
+          defaultValue={searchValue}
         />
       </div>
 

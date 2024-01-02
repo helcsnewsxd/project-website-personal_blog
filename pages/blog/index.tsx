@@ -1,6 +1,7 @@
 import { getAllPosts } from "@/lib/getPosts";
 import type PostType from "@/interfaces/post";
 import SearchPosts from "@/components/posts/group/search-posts";
+import { Suspense } from "react";
 
 type Props = {
   allPosts: PostType[];
@@ -15,7 +16,9 @@ export default function Blog({ allPosts }: Props) {
             Todos mis blogs
           </h1>
 
-          <SearchPosts allPosts={allPosts} />
+          <Suspense>
+            <SearchPosts allPosts={allPosts} />
+          </Suspense>
         </div>
       </div>
     </div>
