@@ -119,7 +119,7 @@ export default function Blog({ allPosts }: Props) {
               {filteredPosts
                 .slice((page - 1) * postsPerPage, page * postsPerPage)
                 .map((post: PostType) => (
-                  <PostCard key={post.slug} post={post} />
+                  <PostCard key={post.slug} post={post} type={true} />
                 ))}
             </div>
           )}
