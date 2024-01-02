@@ -3,10 +3,6 @@ import { getPostBySlug, getAllPostsCustom } from "../../../lib/getPosts";
 import markdownToHtml from "../../../lib/markdownToHtml";
 import Image from "next/image";
 import markdownStyles from "@/styles/markdown.module.css";
-import hljs from "highlight.js/lib/core";
-import cpp from "highlight.js/lib/languages/cpp";
-
-hljs.registerLanguage("cpp", cpp);
 
 type Props = {
   post: PostType;
