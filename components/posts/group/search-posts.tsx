@@ -138,37 +138,8 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
   };
 
   return (
-    <div>
-      <div className="flex flex-row justify-center items-center">
-        <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn m-1 bg-base-100 shadow-sm"
-          >
-            Elegir tema
-          </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
-          >
-            {allTypes.map((type) => (
-              <li key={type}>
-                <button
-                  onClick={handleSearchByType}
-                  className={
-                    postType === type || (postType === "" && type === "Todos")
-                      ? "bg-accent text-base-100"
-                      : ""
-                  }
-                >
-                  {type}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-
+    <div className="flex flex-col items-center">
+      <div className="flex flex-row items-center">
         <input
           type="text"
           placeholder="Buscar"
@@ -176,6 +147,52 @@ export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
           onChange={handleSearchChange}
           defaultValue={searchValue}
         />
+        <button className="btn bg-base-100 shadow-lg ml-4 hover:scale-105">
+          <svg
+            id="SEARCH"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.5 9.86705C0.5 4.38884 5.11846 0 10.75 0C16.3815 0 21 4.38884 21 9.86705C21 12.3289 20.0673 14.5707 18.5291 16.2931L21.7693 19.4027C22.0682 19.6895 22.0779 20.1642 21.7911 20.4631C21.5043 20.762 21.0295 20.7717 20.7307 20.4849L17.4488 17.3353C15.6481 18.832 13.3031 19.7341 10.75 19.7341C5.11846 19.7341 0.5 15.3453 0.5 9.86705ZM10.75 1.5C5.88813 1.5 2 5.27484 2 9.86705C2 14.4593 5.88813 18.2341 10.75 18.2341C15.6119 18.2341 19.5 14.4593 19.5 9.86705C19.5 5.27484 15.6119 1.5 10.75 1.5Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div className="dropdown mt-4">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn m-1 bg-base-100 shadow-lg hover:scale-105"
+        >
+          Elegir tema
+        </div>
+        <ul
+          tabIndex={0}
+          className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
+        >
+          {allTypes.map((type) => (
+            <li key={type}>
+              <button
+                onClick={handleSearchByType}
+                className={
+                  postType === type || (postType === "" && type === "Todos")
+                    ? "bg-accent text-base-100"
+                    : ""
+                }
+              >
+                {type}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {filteredPosts.length === 0 ? (
