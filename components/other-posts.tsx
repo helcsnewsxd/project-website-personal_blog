@@ -1,6 +1,5 @@
 import type PostType from "@/interfaces/post";
 import PostCard from "@/components/post-card";
-import Link from "next/link";
 
 export default function OtherPosts({ posts }: { posts: PostType[] }) {
   return (
