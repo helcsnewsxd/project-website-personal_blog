@@ -22,7 +22,9 @@ const config: Config = {
       {
         night: {
           ...require("daisyui/src/theming/themes")["night"],
-          primary: "#1d4ed8",
+          primary: "#174082",
+          secondary: "#1d4ed8",
+          accent: "rgb(56, 189, 248)",
         },
       },
     ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
