@@ -1,6 +1,6 @@
 import { getAllPosts } from "@/lib/getPosts";
 import type PostType from "@/interfaces/post";
-import PostCard from "@/components/post-card";
+import PostCard from "@/components/posts/individual/post-card";
 import { useState } from "react";
 
 type Props = {

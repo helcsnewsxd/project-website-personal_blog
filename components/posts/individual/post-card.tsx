@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type PostType from "../interfaces/post";
+import type PostType from "@/interfaces/post";
 
 type Props = {
   post: PostType;
@@ -37,7 +37,7 @@ export default function PostCard({ post, type }: Props) {
     <div className={`card bg-base-100 ${type ? "shadow-xl" : "border"}`}>
       {isNew(new Date(post.date)) && (
         <div className="absolute right-0 top-0">
-          <p className="bg-secondary text-sm rounded-lg py-1 px-2 mt-3 mr-3">
+          <p className="bg-secondary text-sm rounded-lg py-1 px-2 mt-2 mr-2">
             Nuevo
           </p>
         </div>

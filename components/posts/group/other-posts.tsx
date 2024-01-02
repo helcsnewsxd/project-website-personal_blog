@@ -1,5 +1,5 @@
 import type PostType from "@/interfaces/post";
-import PostCard from "@/components/post-card";
+import PostCard from "../individual/post-card";
 
 export default function OtherPosts({ posts }: { posts: PostType[] }) {
   return (

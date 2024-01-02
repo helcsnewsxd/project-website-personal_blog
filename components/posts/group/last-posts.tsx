@@ -1,6 +1,6 @@
 import Link from "next/link";
-import PostCard from "./post-card";
-import type PostType from "../interfaces/post";
+import type PostType from "@/interfaces/post";
+import PostCard from "../individual/post-card";
 
 type Props = {
   posts: PostType[];

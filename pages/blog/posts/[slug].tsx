@@ -1,12 +1,8 @@
-import type PostType from "../../../interfaces/post";
-import {
-  getPostBySlug,
-  getAllPostsCustom,
-  getAllPosts,
-} from "../../../lib/getPosts";
-import markdownToHtml from "../../../lib/markdownToHtml";
-import { PostContent } from "@/components/post-content";
-import OtherPosts from "@/components/other-posts";
+import type PostType from "@/interfaces/post";
+import { getPostBySlug, getAllPostsCustom, getAllPosts } from "@/lib/getPosts";
+import markdownToHtml from "@/lib/markdownToHtml";
+import PostContent from "@/components/posts/individual/post-content";
+import OtherPosts from "@/components/posts/group/other-posts";
 import Image from "next/image";
 
 type Props = {

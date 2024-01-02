@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
-import { getAllPosts } from "../lib/getPosts";
-import type PostType from "../interfaces/post";
+import { getAllPosts } from "@/lib/getPosts";
+import type PostType from "@/interfaces/post";
 
-import LastPosts from "../components/last-posts";
+import LastPosts from "@/components/posts/group/last-posts";
 import WelcomeBanner from "@/components/welcome-banner";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -6,7 +6,7 @@ type Props = {
   post: PostType;
 };
 
-export function PostContent({ post }: Props) {
+export default function PostContent({ post }: Props) {
   let dateString = new Date(post.date).toLocaleString("es-ar", {
     weekday: "long",
     year: "numeric",
