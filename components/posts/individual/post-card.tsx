@@ -57,7 +57,7 @@ export default function PostCard({ post, type }: Props) {
         </div>
         <div className="text-start justify-start w-auto">
           {limitedTags.map((tag: string) => (
-            <PostTagBadge key={tag} tag={tag} />
+            <PostTagBadge key={tag} tag={tag} type={true} />
           ))}
         </div>
         <p className="text-pretty text-base p-1 text-start">

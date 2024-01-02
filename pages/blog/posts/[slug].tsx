@@ -4,6 +4,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import PostContent from "@/components/posts/individual/post-content";
 import OtherPosts from "@/components/posts/group/other-posts";
 import Image from "next/image";
+import PostTagBadge from "@/components/posts/individual/badges/post-tag";
 
 type Props = {
   post: PostType;
@@ -37,12 +38,7 @@ export default function Post({ post, allPosts }: Props) {
           </h2>
           <div className="flex flex-wrap">
             {post.tags.map((tag) => (
-              <div
-                key={tag}
-                className="badge badge-outline badge-accent text-pretty text-sm lg:text-base m-1 w-auto h-auto"
-              >
-                {tag}
-              </div>
+              <PostTagBadge key={tag} tag={tag} type={false} />
             ))}
           </div>
         </div>
