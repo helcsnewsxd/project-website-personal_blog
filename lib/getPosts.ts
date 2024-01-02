@@ -8,7 +8,6 @@ const fields = [
   "slug",
   "title",
   "description",
-  "coverImage",
   "date",
   "author",
   "type",
