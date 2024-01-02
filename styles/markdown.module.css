@@ -1,29 +1,25 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply leading-relaxed text-base lg:text-lg;
 }
 
 /* Titles */
 
 .markdown h1 {
-  @apply text-4xl mt-14 mb-4 leading-snug text-balance font-semibold;
+  @apply lg:text-4xl text-2xl mt-14 mb-4 leading-snug text-balance font-semibold;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug text-balance font-semibold;
+  @apply lg:text-3xl text-xl mt-12 mb-4 leading-snug text-balance font-semibold;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug text-balance font-semibold;
-}
-
-.markdown h4 {
-  @apply text-xl mt-8 mb-4 leading-snug text-balance font-semibold;
+  @apply lg:text-2xl text-xl mt-8 mb-4 leading-snug text-balance font-semibold;
 }
 
 /* Text */
 
 .markdown p {
-  @apply text-lg leading-relaxed text-pretty;
+  @apply lg:text-lg text-base leading-relaxed text-pretty;
 }
 
 .markdown a {
@@ -57,25 +53,25 @@
 /* Code */
 
 .markdown pre {
-  @apply text-sm leading-snug text-pretty p-4 rounded-md bg-base-300;
+  @apply text-xs lg:text-sm leading-snug text-pretty p-4 rounded-md bg-base-300;
 }
 
 .markdown code {
-  @apply text-sm leading-snug text-pretty;
+  @apply text-xs lg:text-sm leading-snug text-pretty;
 }
 
 .markdown code::before {
-  @apply text-sm leading-snug text-pretty;
+  @apply text-xs lg:text-sm leading-snug text-pretty;
 }
 
 .markdown pre code {
-  @apply text-sm leading-snug text-pretty;
+  @apply text-xs lg:text-sm leading-snug text-pretty;
 }
 
 /* Blockquote */
 
 .markdown blockquote {
-  @apply text-lg leading-relaxed text-pretty border-l-4 border-secondary pl-4;
+  @apply text-base lg:text-lg leading-relaxed text-pretty border-l-4 border-secondary pl-4;
 }
 
 /* Images */
@@ -109,5 +105,5 @@
 /* Inline code */
 
 .markdown p code {
-  @apply text-sm leading-snug text-pretty;
+  @apply text-xs lg:text-sm leading-snug text-pretty;
 }
