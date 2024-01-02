@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import type { AppProps } from "next/app";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 
 export default function App({ Component, pageProps }: AppProps) {
