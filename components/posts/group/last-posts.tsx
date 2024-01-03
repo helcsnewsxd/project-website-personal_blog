@@ -16,7 +16,12 @@ export default function LastPosts({ posts }: Props) {
           </h1>
 
           {posts.length > 0 ? (
-            <div className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3">
+            <div
+              className={`grid grid-cols-1 gap-4 py-6 lg:grid-cols-${Math.min(
+                posts.length,
+                3
+              )}`}
+            >
               {posts.map((post: PostType) => (
                 <PostCard key={post.slug} post={post} type={true} />
               ))}
