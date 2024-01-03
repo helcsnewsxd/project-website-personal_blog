@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function Twitter() {
   return (
-    <Link href="https://twitter.com/helcsnewsxd" className="hover:scale-125">
+    <Link
+      target="_blank"
+      href="https://twitter.com/helcsnewsxd"
+      className="hover:scale-125"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

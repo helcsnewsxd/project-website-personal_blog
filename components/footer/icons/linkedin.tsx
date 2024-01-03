@@ -4,6 +4,7 @@ export default function Linkedin() {
   return (
     <Link
       href="https://www.linkedin.com/in/emanuel-nicolas-herrador/"
+      target="_blank"
       className="hover:scale-125"
     >
       <svg

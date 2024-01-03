@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function Telegram() {
   return (
-    <Link href="https://t.me/helcsnewsxd" className="hover:scale-125">
+    <Link
+      href="https://t.me/helcsnewsxd"
+      target="_blank"
+      className="hover:scale-125"
+    >
       <svg
         width="24px"
         height="24px"

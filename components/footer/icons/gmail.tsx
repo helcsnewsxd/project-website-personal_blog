@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function Gmail() {
   return (
-    <Link href="mailto:emanuelherrador2@gmail.com" className="hover:scale-125">
+    <Link
+      href="mailto:emanuelherrador2@gmail.com"
+      target="_blank"
+      className="hover:scale-125"
+    >
       <svg
         width="24"
         height="24"

@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function GitHub() {
   return (
-    <Link href="https://github.com/helcsnewsxd" className="hover:scale-125">
+    <Link
+      href="https://github.com/helcsnewsxd"
+      target="_blank"
+      className="hover:scale-125"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

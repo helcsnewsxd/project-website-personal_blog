@@ -4,6 +4,7 @@ export default function Instagram() {
   return (
     <Link
       href="https://www.instagram.com/helcsnewsxd/"
+      target="_blank"
       className="hover:scale-125"
     >
       <svg
