@@ -9,7 +9,7 @@ type Props = {
 export default function LastPosts({ posts }: Props) {
   return (
     <div className="hero bg-base-200">
-      <div className="hero-content text-center mt-20 mb-20 animatecss animatecss-fadeInUp">
+      <div className="hero-content text-center mt-20 mb-20 animatecss animatecss-fadeIn">
         <div className="max-w-screen">
           <h1 className="text-5xl text-balance font-bold py-6">
             Últimos posteos
