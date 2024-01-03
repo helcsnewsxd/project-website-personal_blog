@@ -2,6 +2,7 @@ import Link from "next/link";
 import type PostType from "@/interfaces/post";
 import PostTypeBadge from "./badges/post-type";
 import PostTagBadge from "./badges/post-tag";
+import Heart from "./properties/heart";
 
 type Props = {
   post: PostType;
@@ -65,10 +66,15 @@ export default function PostCard({ post, type }: Props) {
         <p className="text-pretty text-base p-1 text-start">
           {limitedDescription}
         </p>
-        <div className="card-actions justify-end p-1">
-          <Link href={`/blog/posts/${post.slug}`}>
-            <button className="btn btn-primary hover:scale-105">Leer</button>
-          </Link>
+        <div className="card-actions justify-between items-center p-1">
+          <div className="flex">
+            <Heart postName={post.slug} />
+          </div>
+          <div>
+            <Link href={`/blog/posts/${post.slug}`}>
+              <button className="btn btn-primary hover:scale-105">Leer</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
