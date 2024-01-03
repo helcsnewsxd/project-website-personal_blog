@@ -94,6 +94,12 @@ export default function SearchPosts({ allPosts, allTypes }: Props) {
     router.push({ search: searchParams.toString() });
   };
 
+  const handleSearchSubmitFromInput = (
+    e: React.KeyboardEvent<HTMLInputElement>
+  ) => {
+    if (e.key === "Enter") handleSearchSubmit();
+  };
+
   // Handle search by type
   const handleSearchByType = (e: React.MouseEvent<HTMLButtonElement>) => {
     setPostType(
@@ -160,6 +166,7 @@ export default function SearchPosts({ allPosts, allTypes }: Props) {
           className="input input-bordered w-auto p-2"
           defaultValue={searchValue}
           onChange={handleSearchChange}
+          onKeyDown={handleSearchSubmitFromInput}
         />
         <button
           className="btn bg-base-100 shadow-lg ml-4 hover:scale-105"
