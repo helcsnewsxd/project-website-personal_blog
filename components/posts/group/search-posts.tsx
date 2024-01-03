@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 
 type Props = {
   allPosts: PostType[];
-  allTags: string[];
   allTypes: string[];
 };
 
@@ -17,13 +16,17 @@ function filterPosts(posts: PostType[], searchValue: string) {
   // Filter posts by search value for title, description and tags and sort for more occurrences
   return posts
     .map((post: PostType) => {
-      let searchContent = post.title + " " + post.description;
+      let searchContent =
+        post.title + " " + post.description + post.content + " ";
       for (let tag of post.tags) {
         searchContent += " " + tag;
       }
 
       let occurrences = 0;
-      let searchValueList = searchValue.split(" ").filter((value) => value);
+      let searchValueList = searchValue
+        .split(" ")
+        .filter((value) => value)
+        .map((value) => value.toLowerCase());
 
       if (searchValueList.length === 0) return { post, occurrences: 1 }; // Withour search value, return all posts
 
@@ -41,7 +44,7 @@ function filterPosts(posts: PostType[], searchValue: string) {
 // Constants
 const postsPerPage = 6;
 
-export default function SearchPosts({ allPosts, allTags, allTypes }: Props) {
+export default function SearchPosts({ allPosts, allTypes }: Props) {
   // URL Parameters
   const router = useRouter();
 

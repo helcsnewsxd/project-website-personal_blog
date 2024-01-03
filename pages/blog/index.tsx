@@ -7,18 +7,6 @@ type Props = {
   allPosts: PostType[];
 };
 
-function getAllTags(allPosts: PostType[]) {
-  let tags: string[] = [];
-
-  for (let post of allPosts) {
-    for (let tag of post.tags) {
-      if (!tags.includes(tag)) tags.push(tag);
-    }
-  }
-
-  return tags;
-}
-
 function getAllTypes(allPosts: PostType[]) {
   let types: string[] = ["Todos"];
 
@@ -39,11 +27,7 @@ export default function Blog({ allPosts }: Props) {
           </h1>
 
           <Suspense>
-            <SearchPosts
-              allPosts={allPosts}
-              allTags={getAllTags(allPosts)}
-              allTypes={getAllTypes(allPosts)}
-            />
+            <SearchPosts allPosts={allPosts} allTypes={getAllTypes(allPosts)} />
           </Suspense>
         </div>
       </div>
