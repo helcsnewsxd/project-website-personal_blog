@@ -46,7 +46,9 @@ export default function PostCard({ post, type }: Props) {
       )}
 
       <div className="card-body">
-        <h2 className="card-title text-balance text-xl">{post.title}</h2>
+        <h2 className="card-title text-start text-balance text-xl">
+          {post.title}
+        </h2>
         <p className="text-pretty font-light text-start text-xs p-1">
           {post.author.name}
           <br />
