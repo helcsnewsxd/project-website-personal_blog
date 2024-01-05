@@ -5,11 +5,9 @@ import type PostType from "@/interfaces/post";
 import LastPosts from "@/components/posts/group/last-posts";
 import WelcomeBanner from "@/components/banners/welcome-banner";
 
-const inter = Inter({ subsets: ["latin"] });
+import Head from "next/head";
 
-export const metadata = {
-  title: "helcsnewsxd | Home",
-};
+const inter = Inter({ subsets: ["latin"] });
 
 type Props = {
   allPosts: PostType[];
@@ -19,10 +17,20 @@ export default function Home({ allPosts }: Props) {
   const limitPosts = allPosts.slice(0, 3);
 
   return (
-    <div className={`pt-16 ${inter.className}`}>
-      <WelcomeBanner />
-      <LastPosts posts={limitPosts} />
-    </div>
+    <>
+      <Head>
+        <title>Principal | HelcsnewsXD</title>
+        <meta
+          name="description"
+          content="Sitio web de Emanuel Nicolás Herrador (helcsnewsxd)"
+        />
+      </Head>
+
+      <div className={`pt-16 ${inter.className}`}>
+        <WelcomeBanner />
+        <LastPosts posts={limitPosts} />
+      </div>
+    </>
   );
 }
 
