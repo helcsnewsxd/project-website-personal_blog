@@ -16,8 +16,8 @@ async function getPostLikes(postName: string) {
     if (posts.rowCount === 0) {
       // Create a new post entry
       await sql`
-      INSERT INTO posts (post_slug, heart_count, seen_count)
-      VALUES (${postName}, ${0}, ${0})
+      INSERT INTO posts (post_slug, heart_count)
+      VALUES (${postName}, ${0})
     `;
 
       return 0;
