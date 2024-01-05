@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 
 type Props = {
@@ -10,6 +8,8 @@ export default function Heart({ postName }: Props) {
   // Get from cookies if the user has liked the post
   // The cookie is an array of post names
   const [isLiked, setIsLiked] = useState(false);
+  const [likes, setLikes] = useState(0);
+  const [showHeart, setShowHeart] = useState(false);
 
   useEffect(() => {
     const likedPosts = localStorage.getItem("likedPosts");
@@ -19,10 +19,23 @@ export default function Heart({ postName }: Props) {
         setIsLiked(true);
       }
     }
+
+    // Quantity of likes
+    console.log("postName", postName);
+    fetch(`/api/likes/${postName}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setLikes(data.likes);
+        console.log("data", data);
+      });
+
+    // Show heart count
+    setShowHeart(true);
   }, [postName]);
 
   const toggleLike = () => {
-    setIsLiked(!isLiked);
+    const newIsLiked = !isLiked;
+    setIsLiked(newIsLiked);
 
     const likedPosts = localStorage.getItem("likedPosts");
     if (likedPosts) {
@@ -40,6 +53,21 @@ export default function Heart({ postName }: Props) {
       }
     } else {
       localStorage.setItem("likedPosts", JSON.stringify([postName]));
+    }
+
+    // Update the quantity of likes
+    if (newIsLiked) {
+      fetch(`/api/likes/${postName}`, {
+        method: "POST",
+        body: JSON.stringify({ likes: likes + 1 }),
+      });
+      setLikes(likes + 1);
+    } else {
+      fetch(`/api/likes/${postName}`, {
+        method: "POST",
+        body: JSON.stringify({ likes: likes - 1 }),
+      });
+      setLikes(likes - 1);
     }
   };
 
@@ -72,7 +100,7 @@ export default function Heart({ postName }: Props) {
   return (
     <div className="flex flex-row items-center">
       {heartIcon}
-      <p className="ml-1 text-sm">123</p>
+      {showHeart && <p className="ml-1 text-sm">{likes}</p>}
     </div>
   );
 }
