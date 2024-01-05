@@ -1,6 +1,7 @@
 import type PostType from "@/interfaces/post";
 import Image from "next/image";
 import markdownStyles from "@/styles/markdown.module.css";
+import Heart from "@/components/posts/individual/properties/heart";
 
 type Props = {
   post: PostType;
@@ -40,6 +41,10 @@ export default function PostContent({ post }: Props) {
           <p>Redactado por {post.author.name}</p>
           <p>{dateString}</p>
         </div>
+      </div>
+
+      <div className="flex justify-start items-center my-10">
+        <Heart postName={post.slug} />
       </div>
 
       <div
