@@ -21,12 +21,10 @@ export default function Heart({ postName }: Props) {
     }
 
     // Quantity of likes
-    console.log("postName", postName);
     fetch(`/api/likes/${postName}`)
       .then((res) => res.json())
       .then((data) => {
         setLikes(data.likes);
-        console.log("data", data);
       });
 
     // Show heart count
