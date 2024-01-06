@@ -3,6 +3,7 @@ import type PostType from "@/interfaces/post";
 import PostTypeBadge from "./badges/post-type";
 import PostTagBadge from "./badges/post-tag";
 import Heart from "./properties/heart";
+import Share from "./properties/share";
 
 type Props = {
   post: PostType;
@@ -67,8 +68,9 @@ export default function PostCard({ post, type }: Props) {
           {limitedDescription}
         </p>
         <div className="card-actions justify-between items-center p-1">
-          <div className="flex">
+          <div className="flex gap-4 items-center">
             <Heart postName={post.slug} />
+            <Share post={post} />
           </div>
           <div>
             <Link href={`/blog/posts/${post.slug}`}>
