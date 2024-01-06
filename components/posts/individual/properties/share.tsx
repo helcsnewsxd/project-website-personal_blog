@@ -27,9 +27,16 @@ const shareButtonWidth = 64;
 
 const emailButton = ({ post, postURL }: PropsSharingButton) => (
   <EmailShareButton
-    url={"https://github.com/next-share"}
-    subject={"Next Share"}
-    body="body"
+    url={postURL}
+    subject={post.title}
+    body={`
+    ¡Hola! 👋
+    Te comparto este post que me pareció interesante. 🤓
+
+    👉 ${post.description}
+
+    Espero que te guste. 😁
+    `}
   >
     <EmailIcon size={shareButtonWidth} round />
   </EmailShareButton>
