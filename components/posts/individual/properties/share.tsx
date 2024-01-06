@@ -30,13 +30,14 @@ const emailButton = ({ post, postURL }: PropsSharingButton) => (
     url={postURL}
     subject={post.title}
     body={`
-    ¡Hola! 👋
-    Te comparto este post que me pareció interesante. 🤓
+¡Hola! 👋
+Te comparto este post que me pareció interesante. 🤓
 
-    👉 ${post.description}
+👉 ${post.description}
 
-    Espero que te guste. 😁
-    `}
+Espero que te guste. 😁
+
+`}
   >
     <EmailIcon size={shareButtonWidth} round />
   </EmailShareButton>
