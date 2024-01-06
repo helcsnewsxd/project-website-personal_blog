@@ -44,11 +44,7 @@ Espero que te guste. 😁
 );
 
 const facebookButton = ({ post, postURL }: PropsSharingButton) => (
-  <FacebookShareButton
-    url={"https://github.com/next-share"}
-    quote={"next-share is a social share buttons for your next React apps."}
-    hashtag={"#nextshare"}
-  >
+  <FacebookShareButton url={postURL} quote={post.title} hashtag="#helcsnewsxd">
     <FacebookIcon size={shareButtonWidth} round />
   </FacebookShareButton>
 );
