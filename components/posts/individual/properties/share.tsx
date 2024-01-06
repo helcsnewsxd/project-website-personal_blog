@@ -159,7 +159,7 @@ export default function Share({ post }: Props) {
             <div className="grid grid-cols-4 gap-2 items-center">
               {shareButtons.map((button, index) => (
                 <div key={index} className="hover:scale-105">
-                  {button({ post })}
+                  {button({ post, postURL })}
                 </div>
               ))}
             </div>
