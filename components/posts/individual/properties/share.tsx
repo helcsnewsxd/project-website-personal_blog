@@ -70,11 +70,7 @@ const twitterButton = ({ post, postURL }: PropsSharingButton) => (
 );
 
 const whatsappButton = ({ post, postURL }: PropsSharingButton) => (
-  <WhatsappShareButton
-    url={"https://github.com/next-share"}
-    title={"next-share is a social share buttons for your next React apps."}
-    separator=":: "
-  >
+  <WhatsappShareButton url={postURL} title={post.title} separator=":: ">
     <WhatsappIcon size={shareButtonWidth} round />
   </WhatsappShareButton>
 );
