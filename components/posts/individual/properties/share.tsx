@@ -53,10 +53,7 @@ const linkedinButton = ({ post, postURL }: PropsSharingButton) => (
 );
 
 const telegramButton = ({ post, postURL }: PropsSharingButton) => (
-  <TelegramShareButton
-    url={"https://github.com/next-share"}
-    title={"next-share is a social share buttons for your next React apps."}
-  >
+  <TelegramShareButton url={postURL} title={post.title}>
     <TelegramIcon size={shareButtonWidth} round />
   </TelegramShareButton>
 );
