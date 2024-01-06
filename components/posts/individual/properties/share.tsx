@@ -13,6 +13,7 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "next-share";
+import Head from "next/head";
 
 type PropsSharingButton = {
   post: PostType;
@@ -46,7 +47,7 @@ const facebookButton = ({ post, postURL }: PropsSharingButton) => (
 );
 
 const linkedinButton = ({ post, postURL }: PropsSharingButton) => (
-  <LinkedinShareButton url={"https://github.com/next-share"}>
+  <LinkedinShareButton url={postURL}>
     <LinkedinIcon size={shareButtonWidth} round />
   </LinkedinShareButton>
 );
