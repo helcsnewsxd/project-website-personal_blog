@@ -2,6 +2,7 @@ import type PostType from "@/interfaces/post";
 import Image from "next/image";
 import markdownStyles from "@/styles/markdown.module.css";
 import Heart from "@/components/posts/individual/properties/heart";
+import Share from "./properties/share";
 
 type Props = {
   post: PostType;
@@ -43,8 +44,9 @@ export default function PostContent({ post }: Props) {
         </div>
       </div>
 
-      <div className="flex justify-start items-center my-10">
+      <div className="flex justify-start items-center my-10 gap-4">
         <Heart postName={post.slug} />
+        <Share post={post} />
       </div>
 
       <div

@@ -112,7 +112,7 @@ export default function Share({ post }: Props) {
         id={`modal_share_${post.slug}`}
         className="modal-toggle"
       />
-      <div className="modal" role="dialog">
+      <div className="modal text-center" role="dialog">
         <div className="modal-box">
           <form method="dialog">
             <button
