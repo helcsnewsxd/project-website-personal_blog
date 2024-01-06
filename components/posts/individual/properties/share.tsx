@@ -4,12 +4,8 @@ import {
   EmailIcon,
   FacebookShareButton,
   FacebookIcon,
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
   LinkedinShareButton,
   LinkedinIcon,
-  RedditShareButton,
-  RedditIcon,
   TelegramShareButton,
   TelegramIcon,
   TwitterShareButton,
@@ -49,28 +45,10 @@ const facebookButton = ({ post, postURL }: PropsSharingButton) => (
   </FacebookShareButton>
 );
 
-const messengerButton = ({ post, postURL }: PropsSharingButton) => (
-  <FacebookMessengerShareButton
-    url={"https://github.com/next-share"}
-    appId={""}
-  >
-    <FacebookMessengerIcon size={shareButtonWidth} round />
-  </FacebookMessengerShareButton>
-);
-
 const linkedinButton = ({ post, postURL }: PropsSharingButton) => (
   <LinkedinShareButton url={"https://github.com/next-share"}>
     <LinkedinIcon size={shareButtonWidth} round />
   </LinkedinShareButton>
-);
-
-const redditButton = ({ post, postURL }: PropsSharingButton) => (
-  <RedditShareButton
-    url={"https://github.com/next-share"}
-    title={"next-share is a social share buttons for your next React apps."}
-  >
-    <RedditIcon size={shareButtonWidth} round />
-  </RedditShareButton>
 );
 
 const telegramButton = ({ post, postURL }: PropsSharingButton) => (
@@ -104,9 +82,7 @@ const whatsappButton = ({ post, postURL }: PropsSharingButton) => (
 const shareButtons = [
   emailButton,
   facebookButton,
-  messengerButton,
   linkedinButton,
-  redditButton,
   telegramButton,
   twitterButton,
   whatsappButton,
@@ -160,7 +136,7 @@ export default function Share({ post }: Props) {
 
           <h3 className="text-lg font-bold">Compartir</h3>
           <div className="mt-5">
-            <div className="grid grid-cols-4 gap-2 items-center">
+            <div className="grid grid-cols-3 gap-2 items-center">
               {shareButtons.map((button, index) => (
                 <div key={index} className="hover:scale-105">
                   {button({ post, postURL })}
