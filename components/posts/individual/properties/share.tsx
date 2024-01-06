@@ -60,8 +60,10 @@ const telegramButton = ({ post, postURL }: PropsSharingButton) => (
 
 const twitterButton = ({ post, postURL }: PropsSharingButton) => (
   <TwitterShareButton
-    url={"https://github.com/next-share"}
-    title={"next-share is a social share buttons for your next React apps."}
+    url={postURL}
+    title={post.title}
+    hashtags={post.tags.slice(0, 10).concat(["helcsnewsxd"])}
+    via="helcsnewsxd"
   >
     <TwitterIcon size={shareButtonWidth} round />
   </TwitterShareButton>
