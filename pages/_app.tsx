@@ -4,7 +4,6 @@ import Link from "next/link";
 import type { AppProps } from "next/app";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
-import ScrollToTopButton from "@/components/buttons/scrollToTop";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <div className="drawer-content">
           <Navbar />
           <Component {...pageProps} />
-          <ScrollToTopButton />
           <Footer />
         </div>
         <div className="drawer-side z-[2500]">
