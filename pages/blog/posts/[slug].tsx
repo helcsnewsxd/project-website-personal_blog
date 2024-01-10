@@ -5,6 +5,7 @@ import PostContent from "@/components/posts/individual/post-content";
 import OtherPosts from "@/components/posts/group/other-posts";
 import Image from "next/image";
 import PostTagBadge from "@/components/posts/individual/badges/post-tag";
+import { useState } from "react";
 
 import Head from "next/head";
 
@@ -16,7 +17,9 @@ type Props = {
 const limitToShow = 3;
 
 export default function Post({ post, allPosts }: Props) {
-  const picturePath = `/assets/posts/${post.picture}.svg`;
+  const [picturePath, setPicturePath] = useState(
+    `/assets/posts/${post.picture}.svg`
+  );
 
   const pageTitle = `${post.title} | HelcsnewsXD`;
   const pageDescription = post.description;
@@ -36,6 +39,9 @@ export default function Post({ post, allPosts }: Props) {
               alt={post.title}
               width={1920}
               height={1080}
+              onError={() => {
+                setPicturePath(`/assets/posts/${post.picture}.png`);
+              }}
             />
           </div>
 
