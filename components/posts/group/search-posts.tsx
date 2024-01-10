@@ -49,9 +49,15 @@ export default function SearchPosts({ allPosts, allTypes }: Props) {
   const router = useRouter();
 
   const searchParams = useSearchParams();
-  const searchValueParam = searchParams.get("searchValue");
-  const pageParam = searchParams.get("page");
-  const postTypeParam = searchParams.get("postType");
+  let searchValueParam = "";
+  let pageParam = "";
+  let postTypeParam = "";
+
+  if (searchParams != null) {
+    searchValueParam = searchParams.get("searchValue")?.toString() || "";
+    pageParam = searchParams.get("page")?.toString() || "";
+    postTypeParam = searchParams.get("postType")?.toString() || "";
+  }
 
   // State variables
   const [searchValue, setSearchValue] = useState(searchValueParam || "");
