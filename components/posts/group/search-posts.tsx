@@ -22,21 +22,25 @@ function filterPosts(posts: PostType[], searchValue: string) {
         searchContent += " " + tag;
       }
 
-      let occurrences = 0;
+      let occurrences = 0,
+        fails = 0;
       let searchValueList = searchValue
         .split(" ")
         .filter((value) => value)
         .map((value) => value.toLowerCase());
 
-      if (searchValueList.length === 0) return { post, occurrences: 1 }; // Withour search value, return all posts
+      if (searchValueList.length === 0)
+        return { post, occurrences: 1, fails: 0 }; // Withour search value, return all posts
 
       for (let value of searchValueList) {
-        occurrences += searchContent.toLowerCase().split(value).length - 1;
+        const val = searchContent.toLowerCase().split(value).length - 1;
+        occurrences += val;
+        fails += val === 0 ? 1 : 0;
       }
 
-      return { post, occurrences };
+      return { post, occurrences, fails };
     })
-    .filter((post) => post.occurrences > 0)
+    .filter((post) => post.occurrences > 0 && post.fails === 0)
     .sort((a, b) => b.occurrences - a.occurrences)
     .map((post) => post.post);
 }
