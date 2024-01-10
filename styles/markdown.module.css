@@ -83,7 +83,7 @@
 /* Tables */
 
 .markdown table {
-  @apply w-auto text-left border-collapse border border-solid border-secondary mx-auto mb-5 mt-5;
+  @apply w-auto border-collapse border border-solid border-secondary mx-auto mb-5 mt-5 text-center;
 }
 
 .markdown table thead tr {
@@ -91,7 +91,7 @@
 }
 
 .markdown table thead tr th {
-  @apply px-4 py-2 border border-solid border-secondary;
+  @apply border border-solid border-secondary lg:px-4 lg:py-2 px-2 py-1;
 }
 
 .markdown table tbody tr {
@@ -99,7 +99,7 @@
 }
 
 .markdown table tbody tr td {
-  @apply px-4 py-2 border border-solid border-secondary;
+  @apply border border-solid border-secondary lg:px-4 lg:py-2 px-2 py-1 text-pretty text-sm lg:text-base;
 }
 
 /* Inline code */
