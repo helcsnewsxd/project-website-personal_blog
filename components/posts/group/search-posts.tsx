@@ -86,14 +86,21 @@ export default function SearchPosts({ allPosts, allTypes }: Props) {
   };
 
   const handleSearchSubmit = () => {
-    setSearchValue(searchValueAuxiliar);
+    // Remove extra spaces
+    const newSearchValue = searchValueAuxiliar
+      .split(" ")
+      .filter((value) => value)
+      .join(" ");
+
+    console.log(newSearchValue);
+
+    setSearchValue(newSearchValue);
     setPage(1);
 
     // Update URL changing only searchValue parameter and keeping the rest
     const searchParams = new URLSearchParams(window.location.search);
 
-    if (searchValueAuxiliar)
-      searchParams.set("searchValue", searchValueAuxiliar);
+    if (newSearchValue) searchParams.set("searchValue", newSearchValue);
     else searchParams.delete("searchValue");
 
     searchParams.delete("page");
