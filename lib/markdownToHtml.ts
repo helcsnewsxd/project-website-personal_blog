@@ -13,5 +13,17 @@ var md = require("markdown-it")().use(require("markdown-it-math"), {
 });
 
 export default function markdownToHtml(markdown: string) {
-  return md.render(markdown);
+  let htmlContent = md.render(markdown);
+
+  // Put all the content into <div>
+  htmlContent = `<div>${htmlContent}</div>`;
+
+  // Put <table> inside <div style="overflow-x:auto;"> to enable horizontal scrolling on small screens
+  htmlContent = htmlContent.replace(
+    /<table>/g,
+    '<div style="overflow-x:auto;"><table>'
+  );
+  htmlContent = htmlContent.replace(/<\/table>/g, "</table></div>");
+
+  return htmlContent;
 }
