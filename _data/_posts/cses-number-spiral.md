@@ -81,9 +81,9 @@ Dado esto, entonces, simplemente nos queda saber cuándo sumar y cuándo restar.
 > | ------- | ----- | ------- | ----- | ------- | ----- |
 > | Decrece | 1     | 2 ↓     | 9 ↑   | 10 ↓    | 25 ↑  |
 > | Crece   | 4 ←   | 3 ↲     | 8 ↑   | 11 ↓    | 24 ↑  |
-> | Decrece | 5 →   | 6 →     | 7 ⮥   | 12 ↓    | 23 ↑  |
+> | Decrece | 5 →   | 6 →     | 7 ⬏   | 12 ↓    | 23 ↑  |
 > | Crece   | 16 ←  | 15 ←    | 14 ←  | 13 ↲    | 22 ↑  |
-> | Decrece | 17 →  | 18 →    | 19 →  | 20 →    | 21 ⮥  |
+> | Decrece | 17 →  | 18 →    | 19 →  | 20 →    | 21 ⬏  |
 
 - Si tenemos que movernos por la columna, entonces sumamos cuando la columna es impar y restamos cuando la columna es par.
 - Si tenemos que movernos por la fila, entonces sumamos cuando la fila es impar y restamos cuando la fila es par.
