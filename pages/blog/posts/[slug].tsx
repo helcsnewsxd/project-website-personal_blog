@@ -11,12 +11,12 @@ import Head from "next/head";
 
 type Props = {
   post: PostType;
-  allPosts: PostType[];
+  otherPosts: PostType[];
 };
 
 const limitToShow = 3;
 
-export default function Post({ post, allPosts }: Props) {
+export default function Post({ post, otherPosts }: Props) {
   const [picturePath, setPicturePath] = useState(
     `/assets/posts/${post.picture}.svg`
   );
@@ -63,12 +63,7 @@ export default function Post({ post, allPosts }: Props) {
           <div className="divider py-10 px-2 lg:py-20 lg:px-10" />
 
           <div>
-            <OtherPosts
-              posts={allPosts
-                .filter((p) => p.slug !== post.slug)
-                .sort((a, b) => 0.5 - Math.random())
-                .slice(0, limitToShow)}
-            />
+            <OtherPosts posts={otherPosts} />
           </div>
         </div>
       </div>
@@ -87,6 +82,10 @@ export const getStaticProps = async ({ params }: Params) => {
   const content = await markdownToHtml(post.content || "");
 
   const allPosts = getAllPosts();
+  const otherPosts = allPosts
+    .filter((p) => p.slug !== post.slug)
+    .sort((a, b) => 0.5 - Math.random())
+    .slice(0, limitToShow);
 
   return {
     props: {
@@ -94,7 +93,7 @@ export const getStaticProps = async ({ params }: Params) => {
         ...post,
         content,
       },
-      allPosts,
+      otherPosts,
     },
   };
 };
