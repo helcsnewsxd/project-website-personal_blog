@@ -19,7 +19,7 @@
 /* Text */
 
 .markdown p {
-  @apply lg:text-lg text-base leading-relaxed text-pretty;
+  @apply lg:text-lg text-base leading-relaxed text-pretty mb-2 mt-2;
 }
 
 .markdown a {
