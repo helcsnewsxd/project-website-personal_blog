@@ -1,0 +1,109 @@
+.markdown {
+  @apply leading-relaxed text-base lg:text-lg;
+}
+
+/* Titles */
+
+.markdown h1 {
+  @apply lg:text-4xl text-2xl mt-14 mb-4 leading-snug text-balance font-semibold;
+}
+
+.markdown h2 {
+  @apply lg:text-3xl text-xl mt-12 mb-4 leading-snug text-balance font-semibold;
+}
+
+.markdown h3 {
+  @apply lg:text-2xl text-xl mt-8 mb-4 leading-snug text-balance font-semibold;
+}
+
+/* Text */
+
+.markdown p {
+  @apply lg:text-lg text-base leading-relaxed text-pretty mb-2 mt-2;
+}
+
+.markdown a {
+  @apply text-secondary hover:underline;
+}
+
+/* Lists */
+
+.markdown ul {
+  @apply list-disc list-inside;
+}
+
+.markdown ol {
+  @apply list-decimal list-inside;
+}
+
+.mardown li {
+  @apply mb-2;
+}
+
+.markdown ul ul,
+.markdown ol ul {
+  @apply list-disc list-inside ml-4;
+}
+
+.markdown ul ol,
+.markdown ol ol {
+  @apply list-decimal list-inside ml-4;
+}
+
+/* Code */
+
+.markdown pre {
+  @apply text-xs lg:text-sm leading-snug text-pretty p-4 rounded-md bg-base-300;
+}
+
+.markdown code {
+  @apply text-xs lg:text-sm leading-snug text-pretty;
+}
+
+.markdown code::before {
+  @apply text-xs lg:text-sm leading-snug text-pretty;
+}
+
+.markdown pre code {
+  @apply text-xs lg:text-sm leading-snug text-pretty;
+}
+
+/* Blockquote */
+
+.markdown blockquote {
+  @apply text-base lg:text-lg leading-relaxed text-pretty border-l-4 border-secondary pl-4;
+}
+
+/* Images */
+
+.markdown img {
+  @apply mx-auto my-8 w-auto;
+}
+
+/* Tables */
+
+.markdown table {
+  @apply w-auto border-collapse border border-solid border-secondary mx-auto mb-5 mt-5 text-center;
+}
+
+.markdown table thead tr {
+  @apply bg-secondary;
+}
+
+.markdown table thead tr th {
+  @apply border border-solid border-secondary lg:px-4 lg:py-2 px-2 py-1;
+}
+
+.markdown table tbody tr {
+  @apply border border-solid border-secondary;
+}
+
+.markdown table tbody tr td {
+  @apply border border-solid border-secondary lg:px-4 lg:py-2 px-2 py-1 text-pretty text-sm lg:text-base;
+}
+
+/* Inline code */
+
+.markdown p code {
+  @apply text-xs lg:text-sm leading-snug text-pretty;
+}
