@@ -1,6 +1,37 @@
 import Image from "next/image";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function LanguagesAndTechnologies() {
+  const initialItems = [
+    "c++",
+    "c",
+    "python",
+    "assembly",
+    "system-verilog",
+    "java",
+    "haskell",
+    "javascript",
+    "html",
+    "css",
+    "react",
+    "nextjs",
+    "omnet++",
+    "mysql",
+    "mongodb",
+    "fastapi",
+    "ghidra",
+  ];
+  const [items, setItems] = useState(initialItems);
+
+  const moveLeft = () => {
+    setItems([items[items.length - 1], ...items.slice(0, items.length - 1)]);
+  };
+
+  const moveRight = () => {
+    setItems([...items.slice(1), items[0]]);
+  };
+
   return (
     <section className="pb-10 grid grid-flow-row grid-cols-1 space-x-5">
       <div>
@@ -8,7 +39,10 @@ export default function LanguagesAndTechnologies() {
           Lenguajes y tecnologías
         </h1>
         <div className="flex flex-row items-center">
-          <button className="btn btn-circle bg-transparent hover:bg-transparent border-none shadow-none hover:scale-150">
+          <button
+            className="btn btn-circle bg-transparent hover:bg-transparent border-none shadow-none hover:scale-150"
+            onClick={moveLeft}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -21,25 +55,7 @@ export default function LanguagesAndTechnologies() {
           </button>
           <div className="overflow-hidden">
             <div className="flex flex-row lg:p-10 p-3 lg:space-x-8 space-x-4">
-              {[
-                "c++",
-                "c",
-                "python",
-                "assembly",
-                "system-verilog",
-                "java",
-                "haskell",
-                "javascript",
-                "html",
-                "css",
-                "react",
-                "nextjs",
-                "omnet++",
-                "mysql",
-                "mongodb",
-                "fastapi",
-                "ghidra",
-              ].map((tech, index) => (
+              {items.map((tech, index) => (
                 <Image
                   key={index}
                   src={`/assets/images/tech-icons/${tech}.svg`}
@@ -50,7 +66,10 @@ export default function LanguagesAndTechnologies() {
               ))}
             </div>
           </div>
-          <button className="btn btn-circle bg-transparent hover:bg-transparent border-none shadow-none hover:scale-150">
+          <button
+            className="btn btn-circle bg-transparent hover:bg-transparent border-none shadow-none hover:scale-150"
+            onClick={moveRight}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
