@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type PostType from "@/interfaces/post";
 import PostTypeBadge from "./badges/post-type";
 import PostTagBadge from "./badges/post-tag";
@@ -73,9 +72,9 @@ export default function PostCard({ post, type }: Props) {
             <Share post={post} />
           </div>
           <div>
-            <Link href={`/blog/posts/${post.slug}`}>
+            <a href={`/blog/posts/${post.slug}`}>
               <button className="btn btn-primary hover:scale-105">Leer</button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
