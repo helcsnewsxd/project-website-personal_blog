@@ -3,7 +3,7 @@ export default function AboutMeBanner() {
     const element = document.getElementById(element_id);
     element?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
+      block: "start",
       inline: "nearest",
     });
   };
