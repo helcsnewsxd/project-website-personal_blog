@@ -1,4 +1,13 @@
 export default function AboutMeBanner() {
+  const scrolltoHash = function (element_id: string) {
+    const element = document.getElementById(element_id);
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
+
   return (
     <div
       className="hero min-h-screen"
@@ -16,9 +25,12 @@ export default function AboutMeBanner() {
             A lo largo de esta sección podrás descubrir más sobre mí, mi
             historia, logros y proyectos.
           </p>
-          <a className="btn btn-primary hover:scale-105" href="#content">
+          <div
+            className="btn btn-primary hover:scale-105"
+            onClick={() => scrolltoHash("content")}
+          >
             ¡Vamos allá!
-          </a>
+          </div>
         </div>
       </div>
     </div>
