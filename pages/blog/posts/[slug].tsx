@@ -18,7 +18,7 @@ const limitToShow = 3;
 
 export default function Post({ post, otherPosts }: Props) {
   const [picturePath, setPicturePath] = useState(
-    `/assets/posts/${post.picture}.svg`
+    `/assets/posts/${post.picture}`
   );
 
   const pageTitle = `${post.title} | HelcsnewsXD`;
@@ -33,17 +33,12 @@ export default function Post({ post, otherPosts }: Props) {
 
       <div className="py-32 px-4 lg:px-10">
         <div className="bg-base-100 lg:shadow-2xl lg:rounded-3xl lg:p-10 animatecss animatecss-fadeIn">
-          <div className="w-1/2 h-auto mb-4 lg:mb-10">
-            <Image
-              src={picturePath}
-              alt={post.title}
-              width={1920}
-              height={1080}
-              onError={() => {
-                setPicturePath(`/assets/posts/${post.picture}.png`);
-              }}
-            />
-          </div>
+          <div
+            className="mb-4 lg:mb-10 lg:h-96 h-60 bg-cover bg-center rounded-3xl relative overflow-hidden"
+            style={{
+              backgroundImage: `url(${picturePath}.svg), url(${picturePath}.png), url(${picturePath}.jpg)`,
+            }}
+          ></div>
 
           <div className="py-10">
             <PostContent post={post} />
