@@ -127,7 +127,7 @@ export default function About() {
                   >
                     <div className="border-solid border-primary rounded-xl border-2 p-3 hover:scale-105 hover:bg-primary/80 hover:text-base-200">
                       <p className="text-pretty lg:text-lg text-base">
-                        "Dr. Ignacio Duarte y Quirós"
+                        Dr. Ignacio Duarte y Quirós
                       </p>
                       <p className="text-pretty lg:text-md text-sm">
                         2021 - Colegio Nacional de Monserrat
@@ -250,9 +250,11 @@ export default function About() {
                       </p>
                     </div>
                     <figure>
-                      <img
+                      <Image
                         src="/assets/images/projects/website.png"
                         alt="Website"
+                        width={400}
+                        height={300}
                       />
                     </figure>
                   </div>
