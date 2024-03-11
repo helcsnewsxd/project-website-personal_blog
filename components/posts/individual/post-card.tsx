@@ -3,6 +3,7 @@ import PostTypeBadge from "./badges/post-type";
 import PostTagBadge from "./badges/post-tag";
 import Heart from "./properties/heart";
 import Share from "./properties/share";
+import Link from "next/link";
 
 type Props = {
   post: PostType;
@@ -72,9 +73,9 @@ export default function PostCard({ post, type }: Props) {
             <Share post={post} />
           </div>
           <div>
-            <a href={`/blog/posts/${post.slug}`}>
+            <Link href={`/blog/posts/${post.slug}`}>
               <button className="btn btn-primary hover:scale-105">Leer</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
