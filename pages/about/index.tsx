@@ -7,7 +7,14 @@ import Skills from "@/components/about/skills";
 import LanguagesAndTechnologies from "@/components/about/languages";
 import CoolProjects from "@/components/about/projects";
 
-export default function About() {
+import ProjectType from "@/interfaces/project";
+import { getAllProjects } from "@/lib/getProjects";
+
+type Props = {
+  allProjects: ProjectType[];
+};
+
+export default function About({ allProjects }: Props) {
   return (
     <>
       <Head>
@@ -27,10 +34,18 @@ export default function About() {
             <Awards />
             <Skills />
             <LanguagesAndTechnologies />
-            <CoolProjects />
+            <CoolProjects allProjects={allProjects} />
           </div>
         </div>
       </div>
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const allProjects = getAllProjects();
+
+  return {
+    props: { allProjects },
+  };
+};

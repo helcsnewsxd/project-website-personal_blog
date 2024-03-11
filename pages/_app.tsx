@@ -32,9 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
               <Link href="/about">Sobre mí</Link>
             </li>
             <li>
-              <Link href="/projects">Proyectos</Link>
-            </li>
-            <li>
               <Link href="/contact">Contacto</Link>
             </li>
           </ul>
