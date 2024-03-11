@@ -48,6 +48,9 @@ const CenterContentDesktop = () => (
       <Link href="/blog">Blog</Link>
     </li>
     <li>
+      <Link href="/projects">Proyectos</Link>
+    </li>
+    <li>
       <Link href="/about">Sobre mí</Link>
     </li>
   </ul>
