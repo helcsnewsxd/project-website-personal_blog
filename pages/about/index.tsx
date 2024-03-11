@@ -22,7 +22,7 @@ export default function About() {
 
       <div id="content">
         <div className="py-5 px-4 lg:px-10">
-          <div className="bg-base-100 lg:shadow-2xl shadow-lg lg:rounded-3xl rounded-xl lg:p-10 p-4">
+          <div className="bg-base-100 lg:shadow-2xl shadow-lg lg:rounded-3xl rounded-xl lg:p-10 p-4 space-y-10">
             <WhoAmI />
             <Awards />
             <Skills />
