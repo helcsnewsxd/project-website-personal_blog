@@ -26,6 +26,7 @@ export default function CoolProjects() {
                 alt="Website"
                 width={400}
                 height={300}
+                priority={true}
               />
             </figure>
           </div>
