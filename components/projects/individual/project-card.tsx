@@ -25,7 +25,7 @@ export function ProjectCard({ project }: Props) {
         </div>
         <figure>
           <Image
-            src={`/assets/images/projects/${project.picture}.png`}
+            src={`/assets/images/projects/${project.picture}`}
             alt={project.picture}
             width={400}
             height={300}
