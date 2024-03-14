@@ -16,9 +16,9 @@ export default function CoolProjects({ allProjects }: Props) {
         Últimos proyectos
       </h1>
       <div className="flex flex-col items-center">
-        <div className="grid grid-flow-row lg:grid-cols-3 grid-cols-1 mb-5">
+        <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mb-5">
           {allProjects.slice(0, cntProjects).map((project) => (
-            <div className="max-w-sm mx-auto" key={project.slug}>
+            <div key={project.slug}>
               <ProjectCard project={project} />
             </div>
           ))}

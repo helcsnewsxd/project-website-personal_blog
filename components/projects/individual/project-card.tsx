@@ -24,11 +24,10 @@ export function ProjectCard({ project }: Props) {
           <p className="lg:text-base text-md">{project.description}</p>
         </div>
         <figure>
-          <Image
+          <img
             src={`/assets/images/projects/${project.picture}`}
             alt={project.picture}
-            width={400}
-            height={300}
+            className="w-auto h-48"
           />
         </figure>
         <div className="p-2 flex flex-row space-x-3 justify-center">
