@@ -268,7 +268,7 @@ export default function SearchPosts({ allPosts, allTypes }: Props) {
           </button>
         )}
 
-        {page + 1 < cntPages && <button className="join-item btn">...</button>}
+        {page + 2 < cntPages && <button className="join-item btn">...</button>}
 
         {page + 1 < cntPages && (
           <button

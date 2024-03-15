@@ -1,7 +1,7 @@
 ---
-title: "Inicio de este nuevo y gran proyecto"
-description: "¡Damos inicio a los blogs en este sitio web!"
-date: "2024/03/10"
+title: "Hello World"
+description: "¡Damos inicio a este hermoso espacio!"
+date: "2024/03/15"
 picture: "general"
 author:
   name: "Emanuel Nicolás Herrador"
@@ -10,41 +10,41 @@ type: "Novedades"
 tags: ["Novedades", "General"]
 ---
 
-## ¡Bienvenida!
+## ¡Bienvenidos a mi blog!
 
-¡Hola a todos!
+¡Hola!
 
-Estoy tan feliz y alegre de empezar el día de hoy con la publicación de los posts, de forma oficial, en mi página web hecha totalmente por mí, de pies a cabeza.
+Soy Emanuel, un chico apasionado por la programación y los algoritmos, y con la motivación para difundir mi pasión a todos y cada uno de ustedes.
 
-Siendo honesto, es un proyecto que quería realizar hace tanto tiempo y hoy me decidí a continuarlo y terminarlo, aunque me quedara despierto toda la noche programando e ideando la estructura de las páginas. Hacer algo con amor y de forma propia es totalmente gratificante, además, obvio, de todo el aprendizaje que se obtiene con estos proyectos (esta es la primera página web que codeo y aprendí un montón).
+Desde hace un tiempo quería hacer mi propio sitio personal dedicado principalmente a los blogs y, al fin, ¡lo he logrado!
 
-## ¿De qué se van a tratar los blogs?
+## ¿De qué se trata?
 
-Bien, los blogs que voy a ir publicando en esta página web van a tratar acerca de curiosidades de la programación, experiencias propias dentro de este ámbito y dentro del de programación competitiva, algoritmos, estructuras de datos, soluciones a problemas y ciberseguridad.
+Este sitio está enfocado principalmente en la divulgación de contenido académico y de experiencias respecto a dos grandes e importantes ámbitos de la programación: **programación competitiva** y **ciberseguridad**. El enfoque que tengo planteado realizar es distinto al de un curso dado que mi punto de vista en ambas ramas es desde el punto de vista competitivo, de las olimpíadas y cómo eso ayuda y favorece al amplio y rápido crecimiento de estas.
 
-Para mayor comodidad a la hora de buscar los posts por temática, cada uno de estos va a estar clasificado según dos criterios principales:
+## ¿Por qué?
 
-- Tipo o categoría
-- Tags o etiquetas
+Actualmente me encuentro preparándome para la 46th ICPC World Final de programación competitiva, a la cual vamos a ir junto con mis compañeros a Luxor, Egipto en abril. Esto me motivó a pensar en todo mi progreso y evolución en esta área, la cual fue, curiosamente, mi primer contacto con la programación (_así es, aprendí a programar de forma autodidacta anotándome en la olimpíada de programación del nivel secundario_).
 
-por lo que se podrá realizar una búsqueda en base a estas condiciones.
+En todo este tiempo, he aprendido de dos formas principales:
+- Autodidacta y blogs de la comunidad
+- Explicaciones de mis compañeros
 
-## Idea del proyecto
+Gracias a ello, he podido notar la importancia del enfoque que se da en la divulgación de la _programación competitiva_ y cómo no se encuentra tanto contenido en _español_.
 
-La idea de este gran proyecto de divulgación que me propongo realizar es con el objetivo de poder contar mis experiencias y poder transmitir mi conocimiento a todo aquél que esté interesado, quiera aprender y le encanten los desafíos, los problemas interesantes y la programación.
+## ¿Cuál es el punto?
 
-Tengo el principal objetivo de generar una comunidad hispano-hablante sobre programación competitiva y ciberseguridad, con la cual estar en contacto mediante diversos canales tales como:
+Por lo anterior, mi objetivo es que este blog sirva de guía, ayuda, lectura y entretenimiento para todos los apasionados de la programación competitiva y de la ciberseguridad, como así también para todos aquellos que quieran iniciar en estos mundos.
 
-- El blog, mediante estos posts
-- YouTube o alguna plataforma de streaming (como Twitch)
-- Discord, creando nuestro propio canal
+La idea de estos blogs es estar dirigido a un público general hispanohablante, pudiendo así ayudar y motivar a personas y a chicos del secundario y/o la universidad a que exploren estas opciones y los grandes beneficios y conocimientos que estas conllevan.
 
-## Saludos
+## ¡Los espero!
 
-Este es mi primer post y quiero que trate de la bienvenida y apertura a este espacio, de lo cual estoy totalmente agradecido a todas aquellas personas que siempre me acompañan y apoyan en todo momento: mi mamá María y mi hermana Belén. ¡Muchísimas gracias! ¡Las amo!
+En la medida que la facultad y el entrenamiento me permitan escribir estos blogs, voy a estar preparándolos detalladamente para que sean totalmente autocontenidos y tengan todas las referencias posibles e importantes, para que el mismo tema puedan verlo tanto acá como en otros sitios de excelentísima calidad.
 
-En los próximos días subiré un nuevo post acerca de programación competitiva, ¡estén atentos!
+¡Voy a estar posteando!
 
-¡Les deseo que tengan un día genial!
+¡Nos vemos!
 
-¡Vamos muchachos/as a brillarrrrrrrrrrrrrrrrrrrr!
+_Emanuel_.
+
