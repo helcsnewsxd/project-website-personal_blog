@@ -15,7 +15,7 @@ export function ProjectCard({ project }: Props) {
 
   return (
     <a href={`${project.link}`} target="_blank">
-      <div className="card bg-base-100 shadow-xl hover:scale-105">
+      <div className="card bg-base-100 shadow-xl hover:scale-105 h-full">
         <div className="card-body">
           <h2 className="card-title lg:text-xl text-lg">{project.title}</h2>
           <p className="text-pretty font-light text-start text-sm p-1">
