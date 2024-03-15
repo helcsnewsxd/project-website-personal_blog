@@ -92,7 +92,7 @@ export default function ProjectView({ allProjects }: Props) {
           </button>
         )}
 
-        {page + 1 < cntPages && <button className="join-item btn">...</button>}
+        {page + 2 < cntPages && <button className="join-item btn">...</button>}
 
         {page + 1 < cntPages && (
           <button
