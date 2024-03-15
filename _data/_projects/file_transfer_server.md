@@ -1,5 +1,5 @@
 ---
-title: "Transferencia de archivos"
+title: "Servidor de transferencia de archivos"
 description: "Servidor con protocolo HFTP (FTP reducido)"
 date: "2023/04/12"
 picture: "file_transfer_server.png"

@@ -1,5 +1,5 @@
 ---
-title: "Planificador de procesos"
+title: "Planificador de procesos en kernel (XV6)"
 description: "Round Robin, MLFQ, Priority Boost"
 date: "2022/10/25"
 picture: "process_scheduling.png"
