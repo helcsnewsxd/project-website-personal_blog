@@ -1,6 +1,6 @@
 ---
 title: "Lector de feeds automático"
-description: "Con detección de entidades nombradas"
+description: "Con detección de entidades nombradas y customización"
 date: "2023/05/14"
 picture: "feed_reader.png"
 link: "https://github.com/helcsnewsxd/paradigmas23_lab2"

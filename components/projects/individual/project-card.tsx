@@ -21,7 +21,9 @@ export function ProjectCard({ project }: Props) {
           <p className="text-pretty font-light text-start text-sm p-1">
             {dateString}
           </p>
-          <p className="lg:text-base text-md">{project.description}</p>
+          <p className="lg:text-base text-md text-center">
+            {project.description}
+          </p>
         </div>
         <figure>
           <img
