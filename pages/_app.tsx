@@ -5,6 +5,8 @@ import type { AppProps } from "next/app";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -39,6 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
 
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
